@@ -1,0 +1,15 @@
+dataset: breast_cancer_wisconsin
+num_hospitals: 4
+dirichlet_alpha: 0.5
+min_class_share: 0.08
+rounds: 30
+local_epochs: 2
+batch_size: 16
+lr: 0.1
+seeds: 10
+dp:
+  noise_multiplier: null   # calibrated from epsilon
+  max_grad_norm: 1.0
+  target_delta: 1.0e-5
+secagg:
+  fixed_point_bits: 20

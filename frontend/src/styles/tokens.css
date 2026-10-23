@@ -1,0 +1,52 @@
+:root {
+  /* Base */
+  --paper: #F6F2EA;
+  --surface: #FFFDF8;
+  --ink: #1A1A1A;
+  --ink-soft: #5C5852;
+  --rule: #E2DCD0;
+
+  /* Rivers */
+  --ganga: #C8963E;
+  --yamuna: #23336B;
+  --saraswati: #8A7CC2;
+  --clay: #A0674B;
+
+  /* States */
+  --verified: #2F7D5B;
+  --flagged: #B4432F;
+  --pending: #C8963E;
+
+  /* Type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Shape */
+  --radius-pill: 999px;
+  --radius-card: 14px;
+  --radius-none: 0;
+  --border-brutal: 2px solid var(--ink);
+  --shadow-brutal: 4px 4px 0 var(--ink);
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.06);
+
+  --on-ganga: #1A1A1A;
+  --on-yamuna: #FFFDF8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #14130F;
+    --surface: #1D1B17;
+    --ink: #F1ECE2;
+    --ink-soft: #A39D92;
+    --rule: #34312B;
+    --ganga: #E0B05A;
+    --yamuna: #8EA2E8;
+    --saraswati: #B3A6E6;
+    --clay: #D08E6E;
+    --verified: #52B88B;
+    --flagged: #E8705A;
+    --on-yamuna: #14130F;
+  }
+}

@@ -37,3 +37,5 @@ Further implementation decisions and verification outcomes are appended below.
 - The paper, slides, and evidence use reproduced measurements. The old draft's dataset counts and unverified gas figures are superseded.
 - **Repository handoff:** retain the original Git history, review the completed work through a pull request, and merge the verified submission into the default branch so a new clone opens the finished project.
 - **Zero is a real score:** a scored update with zero contribution now displays 0 rather than “pending,” is included in participant averages, and can be visibly flagged. The active attack/privacy settings are labelled separately from controls for a new run. The accuracy chart uses the full 0–100% range so an early low-accuracy round is not clipped.
+
+- **Existing hosting reused:** the account already had a Sangam Vercel project linked to this repository. Its API environment is updated, so the final branded URL is `https://sangam-eight-drab.vercel.app`. The temporary frontend deployment remains a free backup.

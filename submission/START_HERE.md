@@ -9,7 +9,7 @@
 5. `DEMO_AND_VIVA.md` — a short demo script and easy answers to likely questions.
 6. `PUBLICATION.md` — a free journal route and the remaining external-submission steps.
 
-Dashboard: https://frontend-phi-tan-78.vercel.app
+Dashboard: https://sangam-eight-drab.vercel.app
 API: https://sangam-api-t4z4.onrender.com/docs
 
 For operator access, use `SANGAM_ADMIN_TOKEN` in the private root `.env` file. It is not included

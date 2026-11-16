@@ -4,7 +4,7 @@ A college research prototype for **blockchain-coordinated federated learning in 
 Four simulated hospitals train a shared model. Contribution scores determine their influence;
 Solidity contracts record update hashes, model content IDs, reputation, and reward points.
 
-**Live dashboard:** https://frontend-phi-tan-78.vercel.app
+**Live dashboard:** https://sangam-eight-drab.vercel.app
 **API / interactive documentation:** https://sangam-api-t4z4.onrender.com/docs
 
 Team: Divyanshh Kalra · Shrey Khandal · Tanish Garg

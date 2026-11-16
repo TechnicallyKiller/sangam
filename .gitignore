@@ -8,3 +8,6 @@ dist
 .pytest_cache/
 .vercel/
 submission/private/
+.env.*
+!.env.example
+Sangam_Submission.zip

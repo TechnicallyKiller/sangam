@@ -1,6 +1,6 @@
 /** Real API state; offline evidence is a measured exported run, never generated data. */
-import type { Ledger as BaseLedger, Round, TxFn, Hospital, UpdateRecord, Tx } from "./demo-ledger";
-export type { Round, TxFn, Hospital, UpdateRecord, Tx, Role, RoundStatus } from "./demo-ledger";
+import type { Ledger as BaseLedger, Round, TxFn, Hospital, UpdateRecord, Tx } from "./types";
+export type { Round, TxFn, Hospital, UpdateRecord, Tx, Role, RoundStatus } from "./types";
 export interface Ledger extends BaseLedger {
   loading: boolean; connection: "live" | "saved" | "unavailable";
   error: string | null; archived: boolean; runId: string;

@@ -200,6 +200,8 @@ class Engine:
         # Use the contract's quantized integer scores/reputation as the authoritative
         # weights, so the displayed reputation and the aggregate agree exactly.
         scores_bps = np.clip(np.rint(scores * 10000), 0, 10000).astype(int).tolist()
+        ordered = sorted(scores_bps)
+        contract_threshold = ((ordered[1] + ordered[2]) // 2) // 2
         tx = self.send(self.reg.functions.recordScores(idx, self.addresses, scores_bps), self.agg, "recordScores", idx, "Four contribution scores recorded")
         self.append_tx(row, tx)
         rep = np.array([self.reg.functions.reputationOf(a).call() / 10000 for a in self.addresses])
@@ -224,7 +226,7 @@ class Engine:
             row["epsilonSpent"] = max((e for e in epsilons if e is not None), default=0)
             row["maskingError"] = masking_error
             for i, u in enumerate(row["updates"]):
-                u.update(score=scores_bps[i] / 10000, weight=float(omega[i]), flagged=bool(scores_bps[i] < np.median(scores_bps) / 2), excluded=bool(omega[i] == 0), reputationAfter=float(rep[i]))
+                u.update(score=scores_bps[i] / 10000, weight=float(omega[i]), flagged=bool(scores_bps[i] < contract_threshold), excluded=bool(omega[i] == 0), reputationAfter=float(rep[i]))
                 self.state["reputation"][str(i)] = float(rep[i])
                 self.state["rewards"][str(i)] = int(self.reg.functions.rewardOf(self.addresses[i]).call())
         h, cid = self.artifact(self.w)

@@ -33,6 +33,7 @@ def main():
     public.mkdir(exist_ok=True)
     (public / "evidence.json").write_text(json.dumps(s, separators=(",", ":"), allow_nan=False))
     print("Saved measured run and public read-only evidence")
+    engine.store.close()
 
 
 if __name__ == "__main__":

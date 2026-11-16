@@ -222,3 +222,7 @@ a { color: var(--yamuna); }
 .run-banner p { font-size:13px; color:var(--ink-soft); margin-top:4px; }
 .experiment-controls { display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-size:13px; }
 .experiment-controls select { margin-left:6px; background:var(--paper); color:var(--ink); padding:6px; border:1px solid var(--rule); border-radius:4px; }
+.card, .two-col > * { min-width: 0; }
+.head-meta { flex-wrap: wrap; }
+.feed li { grid-template-columns: 64px minmax(0, 1fr) auto; }
+.feed li > div { min-width: 0; overflow-wrap: anywhere; }

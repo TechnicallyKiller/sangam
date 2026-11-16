@@ -1,0 +1,25 @@
+name: Verify Sangam
+on:
+  push:
+  pull_request:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r backend/requirements.txt pytest
+      - run: python -m pytest fl/tests backend/tests -q
+      - run: npm ci && npx hardhat test
+        working-directory: contracts
+      - run: python tools/prepare_artifacts.py && git diff --exit-code backend/compiled
+      - run: npm ci && npm run build
+        working-directory: frontend

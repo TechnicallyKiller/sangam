@@ -9,7 +9,7 @@ import { PageHead, StatusChip } from "../components/ui";
 import { fmtDateTime, pct } from "../lib/format";
 
 export default function Participants() {
-  const { hospitals, rounds, reputation, rewards } = useLedger();
+  const { hospitals, rounds, reputation, rewards, attack } = useLedger();
   const [selected, setSelected] = useState<number | null>(null);
   const latest = rounds[rounds.length - 1];
   const flagged = rounds.flatMap((r) => r.updates.filter((u) => u.flagged).map((u) => ({ r, u })));
@@ -39,7 +39,7 @@ export default function Participants() {
                     <td><div className="rep-cell"><RepBar value={rep} flagged={!!u?.flagged} /><span className="mono">{rep.toFixed(2)}</span></div></td>
                     <td className="mono">{s.avg.toFixed(3)}</td>
                     <td className="mono">{rewards[h.id].toLocaleString("en-US")}</td>
-                    <td><PrivacyBadge spent={latest.epsilonSpent} /></td>
+                    <td><PrivacyBadge spent={latest.epsilonByHospital?.[h.id] ?? latest.epsilonSpent} enabled={(h.id !== 3 || attack === "none") && latest.epsilonByHospital?.[h.id] !== null} /></td>
                     <td>{u?.excluded ? <StatusChip status="excluded" /> : s.flags ? <span className="chip chip-pending"><i />{s.flags} flagged</span> : <StatusChip status="verified" />}</td>
                   </tr>
                 );

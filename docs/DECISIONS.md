@@ -25,3 +25,14 @@ Further implementation decisions and verification outcomes are appended below.
 - **Stable scoring arithmetic:** use the standard sigmoid implementation for the same score equation, avoiding overflow warnings for extremely bad updates.
 - **Dataset correction:** the implemented 7% validation split has 415 training, 40 validation, and 114 test records. The previous paper's 398/57/114 figures described a different split; the final manuscript uses the code's actual counts.
 - **Separate evidence:** multi-seed research results remain separate from a single interactive demonstration. The dashboard never fabricates comparison curves or substitutes paper averages for live measurements.
+
+## Verification and deployment
+
+- Python tests cover gradient correctness, mask cancellation, privacy-accountant agreement, reputation, API authorization, actual contract execution, and model integrity. Eight tests pass.
+- All eight existing Hardhat contract tests pass. The production frontend builds successfully.
+- The free Render API uses PostgreSQL persistence and executes real local-EVM rounds. Live API authorization and model/hash verification were checked.
+- The Vercel frontend uses the hosted API. Its Git build root is `frontend/`, and the API URL is a saved build environment setting.
+- Browser checks cover all four pages, hash verification, and a mobile viewport. An obsolete mock-wallet initializer was removed after the first browser check exposed it. The mobile layout was adjusted after an overflow check.
+- Journal preparation uses Informatica's stated free Normal track as the practical no-fee option. Its stated first-decision target is 6–12 months, so it cannot be represented as a completed publication for the immediate defence.
+- The paper, slides, and evidence use reproduced measurements. The old draft's dataset counts and unverified gas figures are superseded.
+- **Repository handoff:** retain the original Git history, review the completed work through a pull request, and merge the verified submission into the default branch so a new clone opens the finished project.

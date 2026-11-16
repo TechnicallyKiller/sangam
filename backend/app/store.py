@@ -37,6 +37,10 @@ class Store:
             rows = self.db.execute("SELECT payload FROM sangam_runs").fetchall()
         return sorted((json.loads(r[0]) for r in rows), key=lambda r: r["createdAt"], reverse=True)
 
+    def close(self):
+        with self.lock:
+            self.db.close()
+
     def model(self, cid, data=None):
         import base64
         with self.lock:

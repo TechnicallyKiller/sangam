@@ -1,5 +1,6 @@
 """Contribution scoring, asymmetric reputation and reputation-weighted weights (Eqs. 2-5)."""
 import numpy as np
+from scipy.special import expit
 
 from model import loss
 
@@ -22,7 +23,7 @@ def score_updates(w, deltas, X_val, y_val):
     cos = np.array([b @ m / (np.linalg.norm(b) * np.linalg.norm(m) + 1e-12) for b in bounded])
     gain = np.array([(l0 - loss(w + b, X_val, y_val)) / l0 for b in bounded])
     agree = np.maximum(0, cos) / max(np.maximum(0, cos).max(), 1e-12)
-    util = np.minimum(1.0, 2 / (1 + np.exp(-20 * gain)))
+    util = np.minimum(1.0, 2 * expit(20 * gain))
     return agree * util
 
 

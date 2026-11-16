@@ -1,6 +1,8 @@
 """Run the evaluation grid and print mean +- SD over seeds. Writes results.json."""
 import argparse
 import json
+import time
+from pathlib import Path
 
 import numpy as np
 import yaml
@@ -33,7 +35,7 @@ def one_seed(seed, cfg, experiments):
         for atk in ("label_flip", "sign_flip", "free_rider"):
             for m in ("fedavg", "median", "sangam"):
                 w, lw = run_federated(split, cfg, rng(), m, attack=atk, seed=seed)
-                out[f"{atk}/{m}"] = {**ev(w), "h4_weight": float(np.nanmean(lw)) * 100 if m == "sangam" else float("nan")}
+                out[f"{atk}/{m}"] = {**ev(w), **({"h4_weight": float(np.mean(lw)) * 100} if m == "sangam" else {})}
         _, lw = run_federated(split, cfg, rng(), "sangam", seed=seed)
         out["honest/sangam"] = {"h4_weight": float(np.mean(lw)) * 100}
     return out
@@ -47,13 +49,20 @@ def main():
     a = ap.parse_args()
     cfg = load_cfg()
     n = a.seeds or cfg["seeds"]
-    runs = [one_seed(s, cfg, a.experiments) for s in range(n)]
+    started = time.time()
+    runs = []
+    for s in range(n):
+        runs.append(one_seed(s, cfg, a.experiments))
+        print(f"Seed {s + 1}/{n} complete", flush=True)
     summary = {}
     for key in runs[0]:
         summary[key] = {m: (float(np.nanmean([r[key][m] for r in runs])),
                             float(np.nanstd([r[key][m] for r in runs])))
                         for m in runs[0][key]}
-    json.dump(summary, open(a.out, "w"), indent=2)
+    output = Path(a.out)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(summary, indent=2, allow_nan=False))
+    output.with_suffix(".seeds.json").write_text(json.dumps({"config": cfg, "experiments": a.experiments, "seeds": list(range(n)), "runs": runs, "durationSeconds": time.time() - started, "standardDeviation": "population (ddof=0)"}, indent=2, allow_nan=False))
     for key, v in summary.items():
         print(f"{key:24s}", "  ".join(f"{m}={mu:6.2f}±{sd:5.2f}" for m, (mu, sd) in v.items()))
 

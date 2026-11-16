@@ -1,0 +1,10 @@
+.git
+.env
+.venv
+.data
+**/node_modules
+**/__pycache__
+frontend
+submission
+*.pdf
+*.pptx

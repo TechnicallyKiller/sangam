@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { X } from "lucide-react";
-import { HOSPITALS, Round, fnLabel } from "../services/ledger";
+import { API, HOSPITALS, Round, fnLabel } from "../services/ledger";
 import { fmtGas, fmtTime, pct } from "../lib/format";
 import { HashChip } from "./HashChip";
 import { PrivacyBadge } from "./PrivacyBadge";
@@ -29,7 +29,7 @@ export function RoundDrawer({ round, onClose }: { round: Round; onClose: () => v
 
         <section className="kv brutal">
           <div><span>Started from model</span><HashChip value={round.startModelHash} head={8} tail={6} /></div>
-          <div><span>Model CID (IPFS)</span><HashChip value={round.startCid} head={10} tail={6} /></div>
+          <div><span>Model content ID</span><HashChip value={round.startCid} head={10} tail={6} /></div>
           <div><span>New global model</span>{round.globalModelHash ? <HashChip value={round.globalModelHash} head={8} tail={6} /> : <em>pending</em>}</div>
           <div><span>New model CID</span>{round.globalCid ? <HashChip value={round.globalCid} head={10} tail={6} /> : <em>pending</em>}</div>
           <div><span>Test accuracy · AUC</span><b className="mono">{round.accuracy ? `${round.accuracy.toFixed(2)}% · ${round.auc!.toFixed(2)}%` : "—"}</b></div>
@@ -47,8 +47,8 @@ export function RoundDrawer({ round, onClose }: { round: Round; onClose: () => v
                 <tr key={u.hospitalId}>
                   <td>{HOSPITALS[u.hospitalId].name}{u.flagged && <span className="chip chip-flagged tight"><i />Flagged</span>}{u.excluded && !u.flagged && <span className="chip chip-excluded tight"><i />Excluded</span>}</td>
                   <td><HashChip value={u.updateHash} /></td>
-                  <td className="mono">{u.score ? u.score.toFixed(3) : "—"}</td>
-                  <td className="mono">{u.score ? pct(u.weight) : "—"}</td>
+                  <td className="mono">{round.phase === "training" ? "—" : u.score.toFixed(3)}</td>
+                  <td className="mono">{round.phase === "training" ? "—" : pct(u.weight)}</td>
                   <td><div className="rep-cell"><RepBar value={u.reputationAfter} flagged={u.flagged} /><span className="mono">{u.reputationAfter.toFixed(2)}</span></div></td>
                 </tr>
               ))}
@@ -69,7 +69,8 @@ export function RoundDrawer({ round, onClose }: { round: Round; onClose: () => v
             </li>
           ))}
         </ol>
-        <p className="foot">Weights live on IPFS. The chain holds only hashes, CIDs and scores.</p>
+        {round.globalCid && <a className="btn btn-secondary" href={`${API}/models/${round.globalCid}`} target="_blank" rel="noreferrer">Download global model</a>}
+        <p className="foot">Weights live in content-addressed off-chain storage. The chain holds hashes, content IDs and scores.</p>
       </aside>
     </div>
   );

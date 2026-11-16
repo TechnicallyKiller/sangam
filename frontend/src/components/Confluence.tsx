@@ -27,7 +27,7 @@ export function Confluence({ round, hospitals }: { round: Round; hospitals: Hosp
           className="saraswati-glow" filter="url(#soft)" />
         <path d={`M170,${MY + 46} C260,${MY + 100} 360,${MY + 20} ${MX},${MY + 34} S800,${MY + 70} ${W - 30},${MY + 40}`}
           className="saraswati" />
-        <text x={MX + 130} y={MY + 104} className="sa-label">masked updates · visible to no one</text>
+        <text x={MX + 130} y={MY + 104} className="sa-label">pairwise masking · arithmetic simulation</text>
 
         {hospitals.map((h, i) => {
           const y0 = 62 + i * 84;
@@ -40,9 +40,9 @@ export function Confluence({ round, hospitals }: { round: Round; hospitals: Hosp
               <path d={d} className={`stream ${flagged ? "stream-flagged" : ""} ${live && !u ? "stream-wait" : ""}`}
                 style={{ stroke: flagged ? undefined : h.color, strokeWidth: w, animationDelay: `${i * 140}ms` }} pathLength={1} />
               <circle cx={150} cy={y0} r={6} fill={flagged ? "var(--flagged)" : h.color} />
-              <text x={30} y={y0 - 2} className="h-name">{h.name.split(" ")[0]}</text>
+              <text x={30} y={y0 - 2} className="h-name">{h.name}</text>
               <text x={30} y={y0 + 15} className="h-sub">
-                {u ? (u.score === 0 ? "committed" : (flagged ? "flagged · " : "") + pct(u.weight)) : live ? "training…" : "—"}
+                {u ? (u.score === 0 && round.phase === "training" ? "committed" : (flagged ? "flagged · " : "") + pct(u.weight)) : live ? "training…" : "—"}
               </text>
             </g>
           );

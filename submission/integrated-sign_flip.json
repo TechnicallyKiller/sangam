@@ -1,0 +1,2032 @@
+{
+  "runId": "449bccaf6d014abe968008df2e74721d",
+  "createdAt": 1794814796114,
+  "hospitals": [
+    {
+      "id": 0,
+      "name": "Hospital A",
+      "city": "Simulated participant",
+      "address": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+      "records": 94,
+      "color": "var(--ganga)"
+    },
+    {
+      "id": 1,
+      "name": "Hospital B",
+      "city": "Simulated participant",
+      "address": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+      "records": 67,
+      "color": "var(--yamuna)"
+    },
+    {
+      "id": 2,
+      "name": "Hospital C",
+      "city": "Simulated participant",
+      "address": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+      "records": 129,
+      "color": "var(--verified)"
+    },
+    {
+      "id": 3,
+      "name": "Hospital D",
+      "city": "Simulated participant",
+      "address": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+      "records": 125,
+      "color": "var(--clay)"
+    }
+  ],
+  "rounds": [
+    {
+      "id": 1,
+      "status": "closed",
+      "startModelHash": "0xe67b8fb6ae261352b2f6a22a31a9179c3055278c35f2ceff000fbfb48db9dd63",
+      "startCid": "bafkreiexuuvreiobud2lp7u7otkdctku5in6afhqvyzmdvqqb4wpuivn2q",
+      "globalModelHash": "0x956bc8eeef8973f8982ef537cb3eca943994f4d661a071f2f30c346ae42121f9",
+      "globalCid": "bafkreigtcqgp72p7hhq4sphhavousyafqmi4oz6hxxlgb4fbnwrk44rcna",
+      "accuracy": 72.80701754385966,
+      "auc": 83.0026455026455,
+      "f1": 75.96899224806202,
+      "epsilonSpent": 0.7756910060260904,
+      "epsilonByHospital": [
+        0.7669044139869987,
+        0.7638020973029451,
+        0.7756910060260904,
+        null
+      ],
+      "openedAt": 1794814802000,
+      "closedAt": 1794814809000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0xb08e39bdb89607dce23ecbf8bcf1aad33fbb73e168781142beb08a7834132df6",
+          "txHash": "0x7e70b277c7967bf15a430e48ac91736841dfa493f432e5285fdc941a7f08168b",
+          "score": 0.9678,
+          "weight": 0.27364289526141483,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.5935
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0xd23ac7028606450bf76632877784e1ad5ce4b6e0c1ca51ffd03fda6a10618f9b",
+          "txHash": "0xfef083fc2f518d6483fedca629e134454a04a91c694c5fadbb76dedc4281d473",
+          "score": 0.9432,
+          "weight": 0.19343304139002684,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.5886
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0x5c64b18a0681964ba16318c5ebbf595ef704bc5815a870061105c94ceec686f2",
+          "txHash": "0x3f2df2f2665552828f4cc7a261395df1ca2464f1e5eb4a100b4f7d5d141ad5ab",
+          "score": 1.0,
+          "weight": 0.3796440175165983,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x4b27cbfea16adae4cf443271e1dbbfab3c7012165a57b769ed532905b25aa946",
+          "txHash": "0x18857a4e1182aee7b0a067597107afdcd6f86ed56011567329a7759995759c52",
+          "score": 0.0,
+          "weight": 0.15328004583195995,
+          "flagged": true,
+          "excluded": false,
+          "reputationAfter": 0.25
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0xb9c95f38f922bf3ea9de8573a7c07b9a3722015d1fc6f5c43591a474876a9d7f",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 1,
+          "block": 7,
+          "gas": 163868,
+          "ts": 1794814802000,
+          "detail": "Start model committed",
+          "blockHash": "0xccad281e3fc5807770d17ef2669fddead0f76338f29f14768c89f8d25b856e97",
+          "status": 1
+        },
+        {
+          "hash": "0x7e70b277c7967bf15a430e48ac91736841dfa493f432e5285fdc941a7f08168b",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 1,
+          "block": 8,
+          "gas": 72853,
+          "ts": 1794814803000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x9428cd6b61d6d2d47359f14944ca549748a14ea101cf968565ac526effd5cfd8",
+          "status": 1
+        },
+        {
+          "hash": "0xfef083fc2f518d6483fedca629e134454a04a91c694c5fadbb76dedc4281d473",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 1,
+          "block": 9,
+          "gas": 55753,
+          "ts": 1794814804000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0x22d1df3bc6e644a2cbb10d17dd9919fbb74b70aff22d24e92b4c8895ffeffc0a",
+          "status": 1
+        },
+        {
+          "hash": "0x3f2df2f2665552828f4cc7a261395df1ca2464f1e5eb4a100b4f7d5d141ad5ab",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 1,
+          "block": 10,
+          "gas": 55753,
+          "ts": 1794814805000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0xf9262802c57c74dea788d1ced35e6daf2dbc9ef7c9e1b9542ebda8d4ecbd80f0",
+          "status": 1
+        },
+        {
+          "hash": "0x18857a4e1182aee7b0a067597107afdcd6f86ed56011567329a7759995759c52",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 1,
+          "block": 11,
+          "gas": 55753,
+          "ts": 1794814806000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0x10c92fcd3a2d3de372ce07ca9eb549cfcfe6b77febe6708e163f532792d7e02c",
+          "status": 1
+        },
+        {
+          "hash": "0x56a7bc743a6ac1412b7043886b6c648abd12f7d08d925e228b3498dbcd4eb6c4",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 1,
+          "block": 12,
+          "gas": 448627,
+          "ts": 1794814807000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0x4380e0aaad596caedec40fc1e1581530987b908f7612bb82a32c2f32211c61c7",
+          "status": 1
+        },
+        {
+          "hash": "0x34a63321d30f1a1022a0ce9447a4c3abbc718519255df62f2e428fe701dec1cb",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 1,
+          "block": 13,
+          "gas": 144881,
+          "ts": 1794814808000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0x4e27fa54719c85c04cb4ea29f9f0e9573fba77cb4fee0860a8fdf9c47cc1c89f",
+          "status": 1
+        },
+        {
+          "hash": "0x7e2c83841485518695633e0634c31451119d99bd23d243656a0bc14297238319",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 1,
+          "block": 14,
+          "gas": 32516,
+          "ts": 1794814809000,
+          "detail": "Round finalized",
+          "blockHash": "0xac134ae7657e7486c0a97091f06f054583765fc18c1d21c5c757e8294240d02d",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 865,
+      "maskingError": 1.792102735834189e-06
+    },
+    {
+      "id": 2,
+      "status": "closed",
+      "startModelHash": "0x956bc8eeef8973f8982ef537cb3eca943994f4d661a071f2f30c346ae42121f9",
+      "startCid": "bafkreigtcqgp72p7hhq4sphhavousyafqmi4oz6hxxlgb4fbnwrk44rcna",
+      "globalModelHash": "0x55aac58a6e31f8cfd842ecb62ae52d62fe3f7465e29c4d9a1e58f97c42333f78",
+      "globalCid": "bafkreieiijusxmmkhqm4nuzdsyvz7dmyachn4fissrf762ea4t4j54tkzm",
+      "accuracy": 88.59649122807018,
+      "auc": 93.22089947089947,
+      "f1": 91.15646258503402,
+      "epsilonSpent": 1.0562151178104284,
+      "epsilonByHospital": [
+        1.0489682433564327,
+        1.0465644272227899,
+        1.0562151178104284,
+        null
+      ],
+      "openedAt": 1794814810000,
+      "closedAt": 1794814817000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0xd7b93ccaba26b67c455813cd187f9e124869ebe351416fea279ca1a4dac4f7a1",
+          "txHash": "0xb147f1b202df3bd362d0f567e86b60edd6d3a778e705c556d353a1a4c894e15c",
+          "score": 1.0,
+          "weight": 0.33504753855905345,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6748
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0xd1562b900e301b0c323ef14d9fb2aba938c37bfe9638139a3e5738dea26d0fa6",
+          "txHash": "0xbd3a3dd9437681b67f3a6344a8fc74c257a0b6956dbe4a4c87ba44a125d7d4a0",
+          "score": 0.8531,
+          "weight": 0.22702567082188888,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6415
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0xc66f24725d028cb5cf405ba82cc17913c25f7f26ad37f90205a1dd7fcda9ba95",
+          "txHash": "0x124e7b2cb4696ab21fec43ca3d6c78443b7f4cfa0e9a946fa66c6c9477a94fcc",
+          "score": 0.8137,
+          "weight": 0.43792679061905776,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6427
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x473b457d8a596ab4a0eb8b02c1cfe7fdefbaa6079667d7334a2c4851230a7dc7",
+          "txHash": "0xb315632ff8066a81f2a72dd4a24d71676c27af062be1768b13be49197e7681e9",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.125
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0x9c57126ae97ec1e97b4e4b760362b9a9d5ba6400f172febb22bc50fe8b7690b0",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 2,
+          "block": 15,
+          "gas": 146780,
+          "ts": 1794814810000,
+          "detail": "Start model committed",
+          "blockHash": "0x4326f72afe8bb8a5694ed03126386fa7002e64ac848d12ab27e8496e384de4cd",
+          "status": 1
+        },
+        {
+          "hash": "0xb147f1b202df3bd362d0f567e86b60edd6d3a778e705c556d353a1a4c894e15c",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 2,
+          "block": 16,
+          "gas": 72853,
+          "ts": 1794814811000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x5d1570f335d7ba93e0a3e3dc53279f78a6a585bacebde3296e6ba23144779f7e",
+          "status": 1
+        },
+        {
+          "hash": "0xbd3a3dd9437681b67f3a6344a8fc74c257a0b6956dbe4a4c87ba44a125d7d4a0",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 2,
+          "block": 17,
+          "gas": 55753,
+          "ts": 1794814812000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0x7c5a25d6d4ff5f85717f4f7d6998965393b480a2a9e2d064dafd9c6fb1082bc1",
+          "status": 1
+        },
+        {
+          "hash": "0x124e7b2cb4696ab21fec43ca3d6c78443b7f4cfa0e9a946fa66c6c9477a94fcc",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 2,
+          "block": 18,
+          "gas": 55753,
+          "ts": 1794814813000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0xabd1539fd246982753032cf77728bd97ca455792672327dec11c908e2a352c4e",
+          "status": 1
+        },
+        {
+          "hash": "0xb315632ff8066a81f2a72dd4a24d71676c27af062be1768b13be49197e7681e9",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 2,
+          "block": 19,
+          "gas": 55753,
+          "ts": 1794814814000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0xc676ae98d56e395909b8ba4c8e58605dd6bb925a9797c33e845a69e57c3cc4c9",
+          "status": 1
+        },
+        {
+          "hash": "0x4e427c82d4f321c592b616c33bbe9602307542dbc23220ca1d4b8c13a973ed5a",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 2,
+          "block": 20,
+          "gas": 250399,
+          "ts": 1794814815000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0x9e453577725f4e04a23f9aa7e82b269c477a33c3ffedfbf96b51b5e08fdb190c",
+          "status": 1
+        },
+        {
+          "hash": "0xa4f4a23b286a71b92cc0baa646fc4600498a926bae1e2e73e8295d4dd8ddce5b",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 2,
+          "block": 21,
+          "gas": 144881,
+          "ts": 1794814816000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0x13ab99cb2e6a7133b318dbe7d1d7f9a0cdf5c6771d8b0b1f263cc245d1ffa363",
+          "status": 1
+        },
+        {
+          "hash": "0x1801ab36abc133c0cfce8036099bd21a341912b21f401451efab2d9243ecc4e9",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 2,
+          "block": 22,
+          "gas": 32516,
+          "ts": 1794814817000,
+          "detail": "Round finalized",
+          "blockHash": "0xd0146bcac5711e2512394c0b6ee94dcca7d688a0a48b376edf5b4b3c4142288d",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 854,
+      "maskingError": 1.2442865141275988e-06
+    },
+    {
+      "id": 3,
+      "status": "closed",
+      "startModelHash": "0x55aac58a6e31f8cfd842ecb62ae52d62fe3f7465e29c4d9a1e58f97c42333f78",
+      "startCid": "bafkreieiijusxmmkhqm4nuzdsyvz7dmyachn4fissrf762ea4t4j54tkzm",
+      "globalModelHash": "0x09413e85e176ac7ef353c9ba177ed58cefc58d2a8060073609b60862a61d803f",
+      "globalCid": "bafkreiaxdaguiaioito3py3lyh4mx6odfuzin75eitsfyzwzuklqg3zpyy",
+      "accuracy": 89.47368421052632,
+      "auc": 95.23809523809523,
+      "f1": 91.78082191780823,
+      "epsilonSpent": 1.2745096841537726,
+      "epsilonByHospital": [
+        1.2678763485778877,
+        1.2658424705425297,
+        1.2745096841537726,
+        null
+      ],
+      "openedAt": 1794814818000,
+      "closedAt": 1794814825000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0x75824bd3d7b7a61b1815c9772740e1ccbaa80e59deabf3d5e0f0308770aa2b9a",
+          "txHash": "0xd17214d40acc01475b3d6aea72287a16309a4ed0ec941858a109ff90ed983540",
+          "score": 1.0,
+          "weight": 0.3471763824286052,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7398
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0xab0ff85b94fa8388d9d4748a5d8ff579a9d421ca9dc420c9515caaedf7cc0706",
+          "txHash": "0x02bc48ba17eb58038e2d4582a750180f3b8465279d0456080b239a87a95ca475",
+          "score": 0.8716,
+          "weight": 0.2299616934366624,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6875
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0x2d506108f2ee62c047d45c44127f79c2cdbc3a3ac975d535827ac1ad3931ef09",
+          "txHash": "0xb5cfe59f33da3c7fa5df9113584645c16c1750ab9a82fbfe61deab83e4db468f",
+          "score": 0.7125,
+          "weight": 0.42286192413473245,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6566
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x338a091b75b45cf345dd19270afb382d67206619f6601a20d8ba92a903df9fec",
+          "txHash": "0x0da4a772b5a8c8f080103409412cb2e1d0139e45df0ef08f2672ec88a23c263c",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0625
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0x9cbc27f24c77caa8f1315126c040b9f29105f666a6e711e0016ec31d208ef6eb",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 3,
+          "block": 23,
+          "gas": 146780,
+          "ts": 1794814818000,
+          "detail": "Start model committed",
+          "blockHash": "0xeece106f1ad82dda7e36e0d685b0b118a333eb4366b023e85e7d5be97f851833",
+          "status": 1
+        },
+        {
+          "hash": "0xd17214d40acc01475b3d6aea72287a16309a4ed0ec941858a109ff90ed983540",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 3,
+          "block": 24,
+          "gas": 72853,
+          "ts": 1794814819000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x742d4cbace46566be643ddd5bc80cf28f40c40931c6453c67564008c86401cab",
+          "status": 1
+        },
+        {
+          "hash": "0x02bc48ba17eb58038e2d4582a750180f3b8465279d0456080b239a87a95ca475",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 3,
+          "block": 25,
+          "gas": 55753,
+          "ts": 1794814820000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0x87890d5b66ab9c0716ff6819fe8cc5e7b6a3635df95d3eed5a73eef371cd7fc5",
+          "status": 1
+        },
+        {
+          "hash": "0xb5cfe59f33da3c7fa5df9113584645c16c1750ab9a82fbfe61deab83e4db468f",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 3,
+          "block": 26,
+          "gas": 55753,
+          "ts": 1794814821000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0xba68e86bcda78f61e6559e4eba221b7e2ec4e9393399fbf5ef1f1d823a44de8b",
+          "status": 1
+        },
+        {
+          "hash": "0x0da4a772b5a8c8f080103409412cb2e1d0139e45df0ef08f2672ec88a23c263c",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 3,
+          "block": 27,
+          "gas": 55753,
+          "ts": 1794814822000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0x3601bbb348c503a62859630bfeaa8cc01208e90e8d78fd5ad2ffbd6cdd22e2a8",
+          "status": 1
+        },
+        {
+          "hash": "0x16d026aec8c91305df0d9f255a212b674943285a4132e666fcd427a3f7769a19",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 3,
+          "block": 28,
+          "gas": 250399,
+          "ts": 1794814823000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0xa9b67c42e2f42360bb9b9d9bddb2d2a024fab987b47a4d5e0281e1fb4efcf1c4",
+          "status": 1
+        },
+        {
+          "hash": "0xec0f27fc750c356f50138dfbed9d4649e01bccd34d069546cc4c97695104ba6c",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 3,
+          "block": 29,
+          "gas": 144881,
+          "ts": 1794814824000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0x0c12b6d11edabb4045655cd06f8f8c6463a812bc659bb8001262924136a0996a",
+          "status": 1
+        },
+        {
+          "hash": "0xb2306b1895c691a203d20842d0291da4051a9f20b2e5eaf9dd200036ebfbe8b3",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 3,
+          "block": 30,
+          "gas": 32516,
+          "ts": 1794814825000,
+          "detail": "Round finalized",
+          "blockHash": "0xff7f907b4605f2167c288427138cbe5330ca8538ca858bf06a9bf469f02ebcfc",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 943,
+      "maskingError": 1.393847650132951e-06
+    },
+    {
+      "id": 4,
+      "status": "closed",
+      "startModelHash": "0x09413e85e176ac7ef353c9ba177ed58cefc58d2a8060073609b60862a61d803f",
+      "startCid": "bafkreiaxdaguiaioito3py3lyh4mx6odfuzin75eitsfyzwzuklqg3zpyy",
+      "globalModelHash": "0x0845bfbe69286230c6ef3876f7aa4ce24ec8eb0427eb11ca715c53260d016db7",
+      "globalCid": "bafkreih45zax3x3qkkpbjykxiqjpzysytvsu3kr6zowhepnl6pvr6xh5sa",
+      "accuracy": 92.10526315789474,
+      "auc": 96.32936507936509,
+      "f1": 93.79310344827586,
+      "epsilonSpent": 1.4603292667518837,
+      "epsilonByHospital": [
+        1.4542846508204363,
+        1.4524605474702748,
+        1.4603292667518837,
+        null
+      ],
+      "openedAt": 1794814826000,
+      "closedAt": 1794814833000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0x13c2ecd9866fdc52f82219a26585faf02e02b1074c12ca7a1e8a15c2f4ac6e2c",
+          "txHash": "0x21da8198fed7182aa241eabecac869a508b567d6a26215b9a4d081e0c05f8223",
+          "score": 0.9646,
+          "weight": 0.34194352321181715,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7847
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0xb15260e761fb067b1db02f826b99e5a7bd1e1975a2b860256ef7154bf08a6c79",
+          "txHash": "0x3ade2b519157cd129ecddbfb395447460fa515ac0bb4b7f1868743de3d725e57",
+          "score": 0.8623,
+          "weight": 0.22437549081327357,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7224
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0xa6fc99b55bd42549a75ad7c0a95dc2f5dc0c76816300353c2ffc526328b7aae0",
+          "txHash": "0x33ab8ebb61fe969ada62aaa48011b38291ff1cd46bfde908a37d359dfd64c234",
+          "score": 1.0,
+          "weight": 0.43368098597490934,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7252
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0xf2c1215a8e03e9a09870de5cca15b90528b02478d7ab707943e93d1baca4b437",
+          "txHash": "0x450cfa4a88c3b02ec7d36f108db4284d3f6b93faea5f38c61ebb19970d04d46f",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0312
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0x654e7889d9e383ad34010f4ab5788a09a84d43ce8a97218845fc31da3c598099",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 4,
+          "block": 31,
+          "gas": 146780,
+          "ts": 1794814826000,
+          "detail": "Start model committed",
+          "blockHash": "0x5887ffce3848519af28bd11950b76910b7054a49d84575316400fdc0ab8e799a",
+          "status": 1
+        },
+        {
+          "hash": "0x21da8198fed7182aa241eabecac869a508b567d6a26215b9a4d081e0c05f8223",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 4,
+          "block": 32,
+          "gas": 72853,
+          "ts": 1794814827000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0xe8aacd947dc8b23643865a839dcdaffadc5db2730c0da7c936442ed999934b50",
+          "status": 1
+        },
+        {
+          "hash": "0x3ade2b519157cd129ecddbfb395447460fa515ac0bb4b7f1868743de3d725e57",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 4,
+          "block": 33,
+          "gas": 55753,
+          "ts": 1794814828000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0x4fa910ea417e42238c9e6541c5dae9e5b74de8b87134d390289684ef07c1cbbe",
+          "status": 1
+        },
+        {
+          "hash": "0x33ab8ebb61fe969ada62aaa48011b38291ff1cd46bfde908a37d359dfd64c234",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 4,
+          "block": 34,
+          "gas": 55741,
+          "ts": 1794814829000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0x1ccb6ffb7831c36b24f32e0004497705f8321bc6a1098b3435a6727697a1c99f",
+          "status": 1
+        },
+        {
+          "hash": "0x450cfa4a88c3b02ec7d36f108db4284d3f6b93faea5f38c61ebb19970d04d46f",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 4,
+          "block": 35,
+          "gas": 55753,
+          "ts": 1794814830000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0x0152b7a8dd9c95c30e68bd019d12b3414c3e39a768c86f2e580a19f934e886c4",
+          "status": 1
+        },
+        {
+          "hash": "0x4c6b04f96333d4a2339b3855082a169292cec30ab623ddfb9ee5becb702f9009",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 4,
+          "block": 36,
+          "gas": 249635,
+          "ts": 1794814831000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0x83af9a81206f4bc7d41bdfaa9c6bd841c9021b22e1dd27b084328ab728cb9d4c",
+          "status": 1
+        },
+        {
+          "hash": "0xcd6c594df19c63d627ed4aecc9ce72430f94c3b3ea06e90a6c0eb5ade0b58d4d",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 4,
+          "block": 37,
+          "gas": 144881,
+          "ts": 1794814832000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0x0cf5042aa06ea498f6325ccdd0b5235a5059277f942cf49918664de7d12a334c",
+          "status": 1
+        },
+        {
+          "hash": "0xbe558456e661b328a23479af4b34d54f1fe829fa011452c8b7e7dcb62107cf9b",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 4,
+          "block": 38,
+          "gas": 32516,
+          "ts": 1794814833000,
+          "detail": "Round finalized",
+          "blockHash": "0xdc7e964cca5d578bfa1fe159ab4c910de69abe89347e17ba757f1e950aa2c9e2",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 862,
+      "maskingError": 1.2646093229054522e-06
+    },
+    {
+      "id": 5,
+      "status": "closed",
+      "startModelHash": "0x0845bfbe69286230c6ef3876f7aa4ce24ec8eb0427eb11ca715c53260d016db7",
+      "startCid": "bafkreih45zax3x3qkkpbjykxiqjpzysytvsu3kr6zowhepnl6pvr6xh5sa",
+      "globalModelHash": "0xbe3f0535d7a9a763485f6254788ff4f5ac7f611ab623661183f2baee2ccdd072",
+      "globalCid": "bafkreif5bioxfgidnmbnmel2gdfiugsm2hhprc4ghoyz5pmqw4kpwdwkgy",
+      "accuracy": 92.10526315789474,
+      "auc": 96.39550264550265,
+      "f1": 93.79310344827586,
+      "epsilonSpent": 1.6257644560199895,
+      "epsilonByHospital": [
+        1.6196547409876378,
+        1.6178257777052254,
+        1.6257644560199895,
+        null
+      ],
+      "openedAt": 1794814834000,
+      "closedAt": 1794814841000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0x5d6da35aab61cc631948f506e34f9102faa33c4636e75389f80aebdac10b433a",
+          "txHash": "0x69aa82e25c0f322a22049a68154772da6b82d00391115d7040c89c372c68eec1",
+          "score": 0.8518,
+          "weight": 0.35424180353026397,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7981
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0x74f10e6e613ee986f165ebae34d4091bd94ac6c3ea3591ad46838531024cc0da",
+          "txHash": "0x8d208cb9d51dd22ad27fc84226ee793e5c1b4a0ef87e38da1f33718a1be6dafa",
+          "score": 0.773,
+          "weight": 0.23173790562101654,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7325
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0x862ea51f341c7b438442392884ed71c4ce8901ee82698476ae9ea46b32013d87",
+          "txHash": "0x0e3fbd24dffe2fed3cccb9205d21b02e60a59e76679ecd4ca59ae81aca3ce391",
+          "score": 0.4981,
+          "weight": 0.41402029084871955,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6797
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x0d542681ee31b79521c7cf143022c9f752696f4e304beb9f98816392020701b4",
+          "txHash": "0x90ebdf49307e0fd1335556ced3255a615df27073ae88fdae02fcfbb3a39d08d1",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0156
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0xb3743ed6c45f96de8ab5c99084c467d7c7f14cca3af6510258d6cb4d6f9d6db5",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 5,
+          "block": 39,
+          "gas": 146780,
+          "ts": 1794814834000,
+          "detail": "Start model committed",
+          "blockHash": "0x21e734686ab7fbbda9188be19d04ed9137d3cd18afa5b9265ca139ac254220b2",
+          "status": 1
+        },
+        {
+          "hash": "0x69aa82e25c0f322a22049a68154772da6b82d00391115d7040c89c372c68eec1",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 5,
+          "block": 40,
+          "gas": 72853,
+          "ts": 1794814835000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x9abeb4d85f7d2db939542e9a1c3875cd7447293896ddc91045dcaa3d79bc5519",
+          "status": 1
+        },
+        {
+          "hash": "0x8d208cb9d51dd22ad27fc84226ee793e5c1b4a0ef87e38da1f33718a1be6dafa",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 5,
+          "block": 41,
+          "gas": 55753,
+          "ts": 1794814836000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0x39f037bd353a6da23f2805fa221c4d7e0a8431d59a1c88bfe4acdbbae073fdfa",
+          "status": 1
+        },
+        {
+          "hash": "0x0e3fbd24dffe2fed3cccb9205d21b02e60a59e76679ecd4ca59ae81aca3ce391",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 5,
+          "block": 42,
+          "gas": 55753,
+          "ts": 1794814837000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0xcde3515f8c3822e64cc1cbca752024776fef8c623e29a5f05bdceb0d25812639",
+          "status": 1
+        },
+        {
+          "hash": "0x90ebdf49307e0fd1335556ced3255a615df27073ae88fdae02fcfbb3a39d08d1",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 5,
+          "block": 43,
+          "gas": 55753,
+          "ts": 1794814838000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0x0d9a12921d4db7560ff5746f6b616c5bfe1d348589a29a92a570e9b32b37624b",
+          "status": 1
+        },
+        {
+          "hash": "0x0367f9fc7bda6542ef479574e46d7208ed69d4a3efeb718ce743a1f1ba6f6e3a",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 5,
+          "block": 44,
+          "gas": 250399,
+          "ts": 1794814839000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0x653bd1fc4f02707453d6d6deb4d84d46347c07fddd62e50f62b14e06ff3adeec",
+          "status": 1
+        },
+        {
+          "hash": "0xfe46f4d560c6e9c3b56389d7774c84b914a4277d5cf4ee36fe5db681ac29884e",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 5,
+          "block": 45,
+          "gas": 144881,
+          "ts": 1794814840000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0xb353d20984f6bd5ca9cf5b84e573862c76067d8257f34ef879a097b6b4608cc4",
+          "status": 1
+        },
+        {
+          "hash": "0xcefa292b91b70c4dc8c9bc11d2d2382e5b29abe02d599057a703746a0b35de26",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 5,
+          "block": 46,
+          "gas": 32516,
+          "ts": 1794814841000,
+          "detail": "Round finalized",
+          "blockHash": "0x12b65e9d437f7995171148f9a6d416ebd942fcf2bed630111a64a03614d297ca",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 915,
+      "maskingError": 1.2358923623875806e-06
+    },
+    {
+      "id": 6,
+      "status": "closed",
+      "startModelHash": "0xbe3f0535d7a9a763485f6254788ff4f5ac7f611ab623661183f2baee2ccdd072",
+      "startCid": "bafkreif5bioxfgidnmbnmel2gdfiugsm2hhprc4ghoyz5pmqw4kpwdwkgy",
+      "globalModelHash": "0xf8bed695b98ca5d2116d51f1cceab848f8fc4a3f687c7ff4b8a18388d29070c5",
+      "globalCid": "bafkreifqivip3xblbvmulev4ybs3j2okmkpkgg5bene62z23inwb5wfaxi",
+      "accuracy": 92.98245614035088,
+      "auc": 96.75925925925925,
+      "f1": 94.52054794520548,
+      "epsilonSpent": 1.7762148217866245,
+      "epsilonByHospital": [
+        1.7704013452015328,
+        1.768675107149094,
+        1.7762148217866245,
+        null
+      ],
+      "openedAt": 1794814842000,
+      "closedAt": 1794814849000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0x314dce04b78e7086305226bbd750e9946d62b14f04afc181b4752fd174623d6b",
+          "txHash": "0x91bb897270c71f9803d1248ac6ecd2f2abad9b88aaf56e09c0f108144f69315c",
+          "score": 1.0,
+          "weight": 0.3644302101738555,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.8384
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0x9c053b9aed15a5754e8894563490616b1b7ea1346bb54fa5e2c4e4fc0bca9495",
+          "txHash": "0x2c0093dc56c7c39474d1a16d3a26e25ab1f3047a83705e12bbcbfa9aed675ed1",
+          "score": 0.9175,
+          "weight": 0.23840682011872133,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7695
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0x6b8aa55715d0c102a90f1254514ced0adb33c5315bb5b870b260ece94f9b72a1",
+          "txHash": "0x5fa0fcea1953e21b0e149ad93e22639a2cf9a8a66d3b8177b95f753c2a6c2083",
+          "score": 0.6104,
+          "weight": 0.39716296970742315,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6658
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x21f79f87f891c121731703ca48c46dcb2730e5b24c255509a3572f555d48ebce",
+          "txHash": "0xcf514d262533c6548c8c97ed68f075f9cee01fa63cfdba3eec54e22ead9e3bf6",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0078
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0xd5377a4f6085628956728d9d383b8869c8a2a5d1c5ef204fe9db5b5624364cc6",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 6,
+          "block": 47,
+          "gas": 146780,
+          "ts": 1794814842000,
+          "detail": "Start model committed",
+          "blockHash": "0x05bf9c9d98df9ee0559dc36f4d359a4787f648e41e7be6ed49e407735269e5cb",
+          "status": 1
+        },
+        {
+          "hash": "0x91bb897270c71f9803d1248ac6ecd2f2abad9b88aaf56e09c0f108144f69315c",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 6,
+          "block": 48,
+          "gas": 72853,
+          "ts": 1794814843000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x47922a6db22dbd6f816bf7b7a7116fc1738d5ba39f16fa7f779a0cc27bd064e3",
+          "status": 1
+        },
+        {
+          "hash": "0x2c0093dc56c7c39474d1a16d3a26e25ab1f3047a83705e12bbcbfa9aed675ed1",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 6,
+          "block": 49,
+          "gas": 55753,
+          "ts": 1794814844000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0xe5c94d654223e96a836a6dd57c95eff6cab20c4ff987d0e3af75a8abfc1eb6ff",
+          "status": 1
+        },
+        {
+          "hash": "0x5fa0fcea1953e21b0e149ad93e22639a2cf9a8a66d3b8177b95f753c2a6c2083",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 6,
+          "block": 50,
+          "gas": 55753,
+          "ts": 1794814845000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0xf1073f25a9eb38fb2347df3b364b871954650ffbfe9c22baa501804955ed78ad",
+          "status": 1
+        },
+        {
+          "hash": "0xcf514d262533c6548c8c97ed68f075f9cee01fa63cfdba3eec54e22ead9e3bf6",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 6,
+          "block": 51,
+          "gas": 55753,
+          "ts": 1794814846000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0xd33c1e38ce11ddedf02ecd0c2ff140e94bccdcb9b1fbb48bf7e2cf85fa450428",
+          "status": 1
+        },
+        {
+          "hash": "0x247394869a0d016a152867fb19caf2921c17b094d8f2f706783359a3b88f39d1",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 6,
+          "block": 52,
+          "gas": 250399,
+          "ts": 1794814847000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0x0d30aac9b430cf2c4ff9a0c3ff4b8efdf6e9f85cb4eda4d531f062086d7464b0",
+          "status": 1
+        },
+        {
+          "hash": "0x148d488d6db0509106268f28b7f81807ff6c79cfafeff3bca7cfb951df2983dd",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 6,
+          "block": 53,
+          "gas": 144881,
+          "ts": 1794814848000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0xdb0b9645b9c0c73b9308858e683301b6ddbeba2d1c964a9b25378ff477a60775",
+          "status": 1
+        },
+        {
+          "hash": "0x9678ccd70a786dbf1f57aa228c3b96abb10a1e67cba573380c22ed98fbce0d70",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 6,
+          "block": 54,
+          "gas": 32516,
+          "ts": 1794814849000,
+          "detail": "Round finalized",
+          "blockHash": "0x99f3a352f5a14724e049aa5b97d8525e868524b1f19e8cd858fe833c86c4d044",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 891,
+      "maskingError": 1.2481693386079407e-06
+    },
+    {
+      "id": 7,
+      "status": "closed",
+      "startModelHash": "0xf8bed695b98ca5d2116d51f1cceab848f8fc4a3f687c7ff4b8a18388d29070c5",
+      "startCid": "bafkreifqivip3xblbvmulev4ybs3j2okmkpkgg5bene62z23inwb5wfaxi",
+      "globalModelHash": "0xd8c934a41eeae9590947cab83b41c0885b9d9762e41fe0f2c086341bd97b92f4",
+      "globalCid": "bafkreig3daotskjc67izmfjcdvkxv2hh273vuhtayihvi5iin636h2uuzi",
+      "accuracy": 92.10526315789474,
+      "auc": 96.92460317460316,
+      "f1": 93.87755102040816,
+      "epsilonSpent": 1.9145179821170726,
+      "epsilonByHospital": [
+        1.9092736025288817,
+        1.9077289886782007,
+        1.9145179821170726,
+        null
+      ],
+      "openedAt": 1794814850000,
+      "closedAt": 1794814857000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0x53ae9f26e3bca3eb52b7cfe6fe5c801bfb35afcd703c181232934445216c2518",
+          "txHash": "0xb56512190b1f1b23d8439324b8f76d350d6aa4e9bae57327aa99af7eb4f6e6b0",
+          "score": 1.0,
+          "weight": 0.3645666667854483,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.8707
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0x9bf1c6e4dfdcc0a219a8167c798d5660fb3d0148559a83a3f3f1a253bc829926",
+          "txHash": "0xe49e404d393005d7712544b528b04a018da27988064d922ba159010e3370b463",
+          "score": 0.7042,
+          "weight": 0.2257391484069601,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7564
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0x32a46eaebdd3629ab20c6c368abba521f9b7e81521738440196d7f48b5fca1fc",
+          "txHash": "0x245eed3085a4de6366f7b6e39c3aa38446610729dd6fda04f5d5e84786508a3b",
+          "score": 0.9021,
+          "weight": 0.4096941848075915,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.713
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x0b43bbd1bf0645686f4000d2877efd62ef15063c45e7c5c872efffd9e390c566",
+          "txHash": "0x381fa3717bbe87908d26041467717bf59072ce22d12bb83fd53179e5838d4dbe",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0039
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0x92567255cf902999186e5efd92d3ba1ff63c1ccf6b8cd6d8dcff929bb1f8a2ac",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 7,
+          "block": 55,
+          "gas": 146780,
+          "ts": 1794814850000,
+          "detail": "Start model committed",
+          "blockHash": "0xa50e096aac37d486bdaaecacd0b68249561047070a9b9bc3488e0c8703761918",
+          "status": 1
+        },
+        {
+          "hash": "0xb56512190b1f1b23d8439324b8f76d350d6aa4e9bae57327aa99af7eb4f6e6b0",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 7,
+          "block": 56,
+          "gas": 72853,
+          "ts": 1794814851000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x0cd3373c38b6bf387a07a5129027c00fe06b07b8bc58c23ea024f73a9e22a9ab",
+          "status": 1
+        },
+        {
+          "hash": "0xe49e404d393005d7712544b528b04a018da27988064d922ba159010e3370b463",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 7,
+          "block": 57,
+          "gas": 55753,
+          "ts": 1794814852000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0x13c8beff136ddea4515c889b2e0d661fec213719d5345e4cb10a23897a49d6e4",
+          "status": 1
+        },
+        {
+          "hash": "0x245eed3085a4de6366f7b6e39c3aa38446610729dd6fda04f5d5e84786508a3b",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 7,
+          "block": 58,
+          "gas": 55753,
+          "ts": 1794814853000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0x0f02243dd89ec57d1c582ce35cfd70233aa6f2bdd1f000975308615e8c9bc36b",
+          "status": 1
+        },
+        {
+          "hash": "0x381fa3717bbe87908d26041467717bf59072ce22d12bb83fd53179e5838d4dbe",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 7,
+          "block": 59,
+          "gas": 55741,
+          "ts": 1794814854000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0x49b7ab1854a78d2e6724c3b951767ea46a2cf6c97cda324a01cf402f2d57bae0",
+          "status": 1
+        },
+        {
+          "hash": "0xf944d677ac89cbaac47a1c20c872a15a0dc1ad5a89f1447110e2b6c11d6131ae",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 7,
+          "block": 60,
+          "gas": 250083,
+          "ts": 1794814855000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0xd52e7bee2371e9bbbe25827864844876b0843401d2e1b9990e3182ff38653e8a",
+          "status": 1
+        },
+        {
+          "hash": "0x65cf74bbdf01de92243bc423f631ff9a411d34b5da8cc1fe2a53694e4e6eba30",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 7,
+          "block": 61,
+          "gas": 144881,
+          "ts": 1794814856000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0x52469983de4c315f8c7b5b9e09679632e254f26ebd517ac272f6a945ce0adb1b",
+          "status": 1
+        },
+        {
+          "hash": "0xba95390ef263689e4df2db5db8dd44831248f2d69defb4b3c4996be49b814e82",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 7,
+          "block": 62,
+          "gas": 32516,
+          "ts": 1794814857000,
+          "detail": "Round finalized",
+          "blockHash": "0xe7c5629274b80b337629f60b504d7a6a41012906c30f365b8856dd1825ae62b5",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 890,
+      "maskingError": 1.171178241436699e-06
+    },
+    {
+      "id": 8,
+      "status": "closed",
+      "startModelHash": "0xd8c934a41eeae9590947cab83b41c0885b9d9762e41fe0f2c086341bd97b92f4",
+      "startCid": "bafkreig3daotskjc67izmfjcdvkxv2hh273vuhtayihvi5iin636h2uuzi",
+      "globalModelHash": "0xd27b5415e325e20710a0e7db739ae74958adb63f8852ecc43fccdeec9dd794f8",
+      "globalCid": "bafkreialsihi4wfnzpg2ef32uzdcpozvwesurrzsznsc6yo7hgopfbmutm",
+      "accuracy": 91.22807017543859,
+      "auc": 96.89153439153439,
+      "f1": 93.15068493150685,
+      "epsilonSpent": 2.0442388864173213,
+      "epsilonByHospital": [
+        2.0397573299806053,
+        2.0384481521936215,
+        2.0442388864173213,
+        null
+      ],
+      "openedAt": 1794814858000,
+      "closedAt": 1794814865000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0x1f11081a2a9b4f23d421575e2658f3a3366a38bcab653c95292323d6e17b3b31",
+          "txHash": "0xaba5f4ea1abed0a30696fe019ceb7fbe3d44fcc99f790c580b929f4af76a52bb",
+          "score": 0.9882,
+          "weight": 0.37652988728490194,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.8942
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0x4b2aca3834e8ca95b64252196c14080a749767d6b1116056f1312ceedc4d5c52",
+          "txHash": "0x4301d629bacf56a9f5d5665130b81ad96ab42f193a06f3926567563c56cd2673",
+          "score": 0.9139,
+          "weight": 0.23647369548019717,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7879
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0x9ec41c35c40c63bcdddabfe0f67e4df229a04cc0b66069c8db80570cb8d8fa7f",
+          "txHash": "0xca7f99b7910e59807c1c34ac36ead9c54b9f60ec06c3ce0eb8164efc8293e50f",
+          "score": 0.4967,
+          "weight": 0.3869964172349009,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6697
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x5211d316b03c410d6c395557195d0a0f34d1f68224c1b6c4ede1385a5a3aea46",
+          "txHash": "0x2fe72935473d89b091921361745ba2cd310f7b3b1785d680572c635af9077217",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0019
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0x1d8fa1b4064b9a8580d1c45a398d46b3dbcd309a6c6f230bb2d115b62d11a24a",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 8,
+          "block": 63,
+          "gas": 146780,
+          "ts": 1794814858000,
+          "detail": "Start model committed",
+          "blockHash": "0x49f8e7cd14b827bb1f21755f4fa0b09a54c8c0c7057e93e743bff6db053b83a6",
+          "status": 1
+        },
+        {
+          "hash": "0xaba5f4ea1abed0a30696fe019ceb7fbe3d44fcc99f790c580b929f4af76a52bb",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 8,
+          "block": 64,
+          "gas": 72853,
+          "ts": 1794814859000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0xb093e67fac66d9533294e0e65d39b2a239ef9f05b96f5eceb869b3c77c567376",
+          "status": 1
+        },
+        {
+          "hash": "0x4301d629bacf56a9f5d5665130b81ad96ab42f193a06f3926567563c56cd2673",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 8,
+          "block": 65,
+          "gas": 55753,
+          "ts": 1794814860000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0xf4fa0c722816824116a227eacec48d6a475abff1b884dd5008195622b730b671",
+          "status": 1
+        },
+        {
+          "hash": "0xca7f99b7910e59807c1c34ac36ead9c54b9f60ec06c3ce0eb8164efc8293e50f",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 8,
+          "block": 66,
+          "gas": 55753,
+          "ts": 1794814861000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0x1832d9f47a2dbcbcd8d64158f72463f05ae4dfdbeb273244e5bc3e21a8ccc345",
+          "status": 1
+        },
+        {
+          "hash": "0x2fe72935473d89b091921361745ba2cd310f7b3b1785d680572c635af9077217",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 8,
+          "block": 67,
+          "gas": 55753,
+          "ts": 1794814862000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0xd96dbe5a54f6b6fe80b03f436b7cf8259c914e4d914aa4dec7494c9a2e8d8ecf",
+          "status": 1
+        },
+        {
+          "hash": "0xb6d06f0f882a01933bd5af8a695d5c9eb7c8745aef91f6721783f4eadb198311",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 8,
+          "block": 68,
+          "gas": 250399,
+          "ts": 1794814863000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0x3b1d5368cf9c35c6b29e9bcb7fd178e5a9f0d351dd755d394b03ff629f5c4a9c",
+          "status": 1
+        },
+        {
+          "hash": "0xe524b25b87d60209bdf7d6c7d407bd7bae97f19469302c9f3f99bc6b27868610",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 8,
+          "block": 69,
+          "gas": 144881,
+          "ts": 1794814864000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0xc2071540cb65812120ecb8b05611dcc7919383e0a9f57f887b383e82ca2f3796",
+          "status": 1
+        },
+        {
+          "hash": "0x15a08906a2aea291fd31cd460e92a9019d5251a9cb2f1278b2e54e37865fc3d1",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 8,
+          "block": 70,
+          "gas": 32516,
+          "ts": 1794814865000,
+          "detail": "Round finalized",
+          "blockHash": "0x952ebaf5298224ae1b7a4967d109d18ca5a7048111e5c0860e0539f97b89164f",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 905,
+      "maskingError": 1.3308640533921112e-06
+    },
+    {
+      "id": 9,
+      "status": "closed",
+      "startModelHash": "0xd27b5415e325e20710a0e7db739ae74958adb63f8852ecc43fccdeec9dd794f8",
+      "startCid": "bafkreialsihi4wfnzpg2ef32uzdcpozvwesurrzsznsc6yo7hgopfbmutm",
+      "globalModelHash": "0x07e553c33118f366ea5ed700994ad2167d73939c98968fabe7b4fc39553de41c",
+      "globalCid": "bafkreigepqbgpezmrtwfzmo2cegsro7e725adnd7yrp3g7qhmhrhfxaa7y",
+      "accuracy": 93.85964912280701,
+      "auc": 97.15608465608466,
+      "f1": 95.23809523809523,
+      "epsilonSpent": 2.1689400487539157,
+      "epsilonByHospital": [
+        2.1638982977626107,
+        2.162425472752253,
+        2.1689400487539157,
+        null
+      ],
+      "openedAt": 1794814866000,
+      "closedAt": 1794814873000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0xba240b06f58003729d36339eaceab99901e61a69e41164027f6237aaba2f9b3d",
+          "txHash": "0xb2bc1397582a5c76f0525bbf7ce1d8a83ab3168182b5aeaeeaeda271b63f8d1c",
+          "score": 0.864,
+          "weight": 0.39274922197156986,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.8881
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0xda2c461db37df9217cde4e13c208830a7694f58197a64157db36741c90bd9f7a",
+          "txHash": "0x5a52110d25d74a97d0391ab6aa7cd26b50bc11e7b3c9c2f10fb1ad03342a4105",
+          "score": 0.2495,
+          "weight": 0.21440605203792873,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6802
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0xc4c80917cbe1296820d0588d498bbcb1b9657255d865961efb3196d625135ad4",
+          "txHash": "0x926029c38281f426e789631420efd10148703120520938d056e931da10c5e6ac",
+          "score": 0.5578,
+          "weight": 0.39284472599050135,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6473
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x0a336b12f6c58557841724201f31691f5f2b32d2a1d4937659a6a5c2d1107009",
+          "txHash": "0x6d96a1245d6ae46d4719b7fb8e5074595649cee9aab4c5c33b122d281654124c",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0009
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0xcf78e70a7126e7c326802dbcbee13a28e78ecd174f84e3d6d0458b709a77bffc",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 9,
+          "block": 71,
+          "gas": 146780,
+          "ts": 1794814866000,
+          "detail": "Start model committed",
+          "blockHash": "0x0a40d673fd63b3ffb54e453a80aaafa7e95d1d55541fc4eca5546b1f948ac382",
+          "status": 1
+        },
+        {
+          "hash": "0xb2bc1397582a5c76f0525bbf7ce1d8a83ab3168182b5aeaeeaeda271b63f8d1c",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 9,
+          "block": 72,
+          "gas": 72853,
+          "ts": 1794814867000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x2feb6f17f2873ed6ced1231cef78b71b1ba7ad98d599730369fe886f082d9f6c",
+          "status": 1
+        },
+        {
+          "hash": "0x5a52110d25d74a97d0391ab6aa7cd26b50bc11e7b3c9c2f10fb1ad03342a4105",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 9,
+          "block": 73,
+          "gas": 55753,
+          "ts": 1794814868000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0x4d0d05a46d8e3626a45cba05918889f1f7e021a3478727a614a0817f4f25841d",
+          "status": 1
+        },
+        {
+          "hash": "0x926029c38281f426e789631420efd10148703120520938d056e931da10c5e6ac",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 9,
+          "block": 74,
+          "gas": 55753,
+          "ts": 1794814869000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0x53b31f8145773743e456e17e492e17decebb91097159cf0f58274a94ca9e1e95",
+          "status": 1
+        },
+        {
+          "hash": "0x6d96a1245d6ae46d4719b7fb8e5074595649cee9aab4c5c33b122d281654124c",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 9,
+          "block": 75,
+          "gas": 55753,
+          "ts": 1794814870000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0x0d2a3c5d9713b04e60c58ea0098e0e058316cb513c112d2cce0fdb2638270bc0",
+          "status": 1
+        },
+        {
+          "hash": "0x56e1844b64a89312c5d55be4182b0935216c1fe385233ee3b87d53f2abe0fd7c",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 9,
+          "block": 76,
+          "gas": 250083,
+          "ts": 1794814871000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0x86aae0579d8661147d539c89660396b3bb3bbdbd7914ff02e61f6d2e253d6af7",
+          "status": 1
+        },
+        {
+          "hash": "0x143a4845dd29f14e39525135aa30c0ab4d46cfe6a461ab7f69050d8eb8a5a2e0",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 9,
+          "block": 77,
+          "gas": 144869,
+          "ts": 1794814872000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0xb4f11a8977d00295bea1c40196ee50169b49bec9824499617ce62a8fae26bb22",
+          "status": 1
+        },
+        {
+          "hash": "0x20bf8127cd53f6543ca8d9c47d1806491a9662bb74133233a71df4becab1a8f0",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 9,
+          "block": 78,
+          "gas": 32516,
+          "ts": 1794814873000,
+          "detail": "Round finalized",
+          "blockHash": "0xfe203686d1dcd329bb962e2ba8acc810526aba44288821b8633b9dd3427c7449",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 912,
+      "maskingError": 1.2812198369738237e-06
+    },
+    {
+      "id": 10,
+      "status": "closed",
+      "startModelHash": "0x07e553c33118f366ea5ed700994ad2167d73939c98968fabe7b4fc39553de41c",
+      "startCid": "bafkreigepqbgpezmrtwfzmo2cegsro7e725adnd7yrp3g7qhmhrhfxaa7y",
+      "globalModelHash": "0x823ed159ce9fcec47132aee12056c5a5887bfe4a56b5d9a617ee5f6874f1f5f1",
+      "globalCid": "bafkreihjedi27yczsim3rbmdayzatg35qq2ach74fy7t34mddnodhilejq",
+      "accuracy": 92.10526315789474,
+      "auc": 97.85052910052909,
+      "f1": 93.79310344827586,
+      "epsilonSpent": 2.283252205166787,
+      "epsilonByHospital": [
+        2.279256810003377,
+        2.2780992096472352,
+        2.283252205166787,
+        null
+      ],
+      "openedAt": 1794814874000,
+      "closedAt": 1794814881000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0x743382ea6dc0a990b012609ff680a3cacaf4816751e0bbcf407067bc72469bb8",
+          "txHash": "0xa59e457a7c7e43f67658c591f1d03da26d16ea8f26fb838c5d7f9ff65d21cacd",
+          "score": 0.2588,
+          "weight": 0.3649191361140412,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7622
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0x9f4133213341f1f72c861ffbd5a2d5c724f614ef7eaa6172e3b8ca5526ae1e17",
+          "txHash": "0xdd35dc82de84e1c2c2c4fefc61e8f5e382b4c0c37c6c714faaee032131924a6a",
+          "score": 0.0872,
+          "weight": 0.19164687492519208,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.5616
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0x625fbe2461541e2162ce4336109f00b7633f00869bb96653eeacee249f7fcf7d",
+          "txHash": "0x420ea1faf5b557c5ed01a1bcc1cac7f48d34f14e83ec4971c4aed42a64eba344",
+          "score": 0.7853,
+          "weight": 0.4434339889607668,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6749
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0xf8673df655d6ec57256d4a424e672f7b1ce2896bf26e4ef173c09c25511215eb",
+          "txHash": "0x5e05fdcb59a10bb9f0349551e44a88036d334cf43b8d8d26ab50f4eba1aab0f4",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0004
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0x60efbecebbd2ea7b69b95239e23fe9b07aca4debb370b76119dbcf57cd42bf95",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 10,
+          "block": 79,
+          "gas": 146768,
+          "ts": 1794814874000,
+          "detail": "Start model committed",
+          "blockHash": "0xd0e095270cb4ddb0083c4f4e62584a1d00e1ed9295cc454a09a065d028a02a86",
+          "status": 1
+        },
+        {
+          "hash": "0xa59e457a7c7e43f67658c591f1d03da26d16ea8f26fb838c5d7f9ff65d21cacd",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 10,
+          "block": 80,
+          "gas": 72853,
+          "ts": 1794814875000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x06d07bcce18226efe1bc8d7ef2d1cd4f4d57be86e572c62b270b1dbc201f0023",
+          "status": 1
+        },
+        {
+          "hash": "0xdd35dc82de84e1c2c2c4fefc61e8f5e382b4c0c37c6c714faaee032131924a6a",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 10,
+          "block": 81,
+          "gas": 55753,
+          "ts": 1794814876000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0xc9e5b563a39259b6da52a73c86aef445c70336ee960e8608cb1d4deec9a15cc9",
+          "status": 1
+        },
+        {
+          "hash": "0x420ea1faf5b557c5ed01a1bcc1cac7f48d34f14e83ec4971c4aed42a64eba344",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 10,
+          "block": 82,
+          "gas": 55729,
+          "ts": 1794814877000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0xb45783805390af81ceb9cc5b21e58cfcc8d050da0b83067a9a4d180184024b53",
+          "status": 1
+        },
+        {
+          "hash": "0x5e05fdcb59a10bb9f0349551e44a88036d334cf43b8d8d26ab50f4eba1aab0f4",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 10,
+          "block": 83,
+          "gas": 55753,
+          "ts": 1794814878000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0x4cd4ddee3af5015cd564fe8246e30ac1aaf60402e54e3fc306add2ae79a490c5",
+          "status": 1
+        },
+        {
+          "hash": "0x500c419b0864d05e71322f8b703faa3e12ed8278ef1e2dae3c959556ad9e0595",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 10,
+          "block": 84,
+          "gas": 249635,
+          "ts": 1794814879000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0x4857f6660a6788a737dacc6c772896f12ddf303cd993af4963543ab1acfc1807",
+          "status": 1
+        },
+        {
+          "hash": "0x44a692ca7471328ad3a67ad8c340b35d0f93fbc092f5d325e01d98c6fab3bb82",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 10,
+          "block": 85,
+          "gas": 144881,
+          "ts": 1794814880000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0x98080ed8b818e4f8f6c3e840de90ab6b728eddf164abcfd58b1d2ae3e6b10331",
+          "status": 1
+        },
+        {
+          "hash": "0x5cc1841de390682a69bde5e27e2dce48140e0337a7c3b51fc9f8438de4b847b2",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 10,
+          "block": 86,
+          "gas": 32516,
+          "ts": 1794814881000,
+          "detail": "Round finalized",
+          "blockHash": "0xa306c0ea58dec6c01d5c0f5ec4a4a9924f2410150b47a493c6e4947afa5085dd",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 929,
+      "maskingError": 1.1995717119767102e-06
+    },
+    {
+      "id": 11,
+      "status": "closed",
+      "startModelHash": "0x823ed159ce9fcec47132aee12056c5a5887bfe4a56b5d9a617ee5f6874f1f5f1",
+      "startCid": "bafkreihjedi27yczsim3rbmdayzatg35qq2ach74fy7t34mddnodhilejq",
+      "globalModelHash": "0xb85e9008664d8e10b862f3cb5ba4a4be647e29d852d035f41f7045e70a2f5198",
+      "globalCid": "bafkreidcgzenpigv7dtrw74sltpnm5uvfsyieq4zta5panjyhgemyr2k34",
+      "accuracy": 92.98245614035088,
+      "auc": 97.88359788359789,
+      "f1": 94.52054794520548,
+      "epsilonSpent": 2.3964481710337635,
+      "epsilonByHospital": [
+        2.3920532363540126,
+        2.3907798759622567,
+        2.3964481710337635,
+        null
+      ],
+      "openedAt": 1794814882000,
+      "closedAt": 1794814889000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0xc3af0b2773221cdc4a3867620e999bfef31d56bf39e8a12f87df2e975655f55b",
+          "txHash": "0x6929b9b15a0498fe3e19e947c9359290b7f32980089b7db9e79e7a15e2b8b1ae",
+          "score": 0.8786,
+          "weight": 0.45898814164375695,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7854
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0x03538baa63910eb2bc0ce57ede15b4ab292f242e585c3bba82e42d595808a318",
+          "txHash": "0xe79791ebf522637820d31df9f3961d1abc32feab423acd13cc0ec0f0cbfea3d4",
+          "score": 1.0,
+          "weight": 0.27041826910523314,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.6492
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0xf95de68d03dbc93ec0014775f357ce13dcdedb90acb202a9b7e82fe8b802b591",
+          "txHash": "0x46a8f2b84b462c09bc191b3a4c98f843d8ea0af1d6c50fd25f95415f5cc9c2b0",
+          "score": 0.0257,
+          "weight": 0.27059358925100996,
+          "flagged": true,
+          "excluded": false,
+          "reputationAfter": 0.3374
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x0ae8e514de71dc563ec47dc59c2805c4efc39d398447eab34a083c7b2abf23fc",
+          "txHash": "0xdf4d4d4801ddd901d0a001e084c0780a77185763db77394862e981770d3b80ae",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0002
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0x0d616be80e42b632194f114e14aabc0e4640ccbffd4aa1b99b58d1041732a30e",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 11,
+          "block": 87,
+          "gas": 146780,
+          "ts": 1794814882000,
+          "detail": "Start model committed",
+          "blockHash": "0x93969a5935cb6317c75ea21a82cf1952d9fb478e9ee3f22eb8756b3a9ed6c56c",
+          "status": 1
+        },
+        {
+          "hash": "0x6929b9b15a0498fe3e19e947c9359290b7f32980089b7db9e79e7a15e2b8b1ae",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 11,
+          "block": 88,
+          "gas": 72853,
+          "ts": 1794814883000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x4b98bc7cd0107c18cb1af54c88ee64b4ff3611e021b46714b524d2c36086f9c6",
+          "status": 1
+        },
+        {
+          "hash": "0xe79791ebf522637820d31df9f3961d1abc32feab423acd13cc0ec0f0cbfea3d4",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 11,
+          "block": 89,
+          "gas": 55753,
+          "ts": 1794814884000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0xf342ecf1e2e4137efa0331e991d3d09105773238f584a384286b95426726f3f7",
+          "status": 1
+        },
+        {
+          "hash": "0x46a8f2b84b462c09bc191b3a4c98f843d8ea0af1d6c50fd25f95415f5cc9c2b0",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 11,
+          "block": 90,
+          "gas": 55753,
+          "ts": 1794814885000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0x4f35cafc0bf63786aab851e6be03f7875d5a3080da7684664cd9edde0ba70058",
+          "status": 1
+        },
+        {
+          "hash": "0xdf4d4d4801ddd901d0a001e084c0780a77185763db77394862e981770d3b80ae",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 11,
+          "block": 91,
+          "gas": 55753,
+          "ts": 1794814886000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0x6005baadeb4d5bca98639e7cec75bdeee11501f1fd8f95cc6e9b39a800c63ff7",
+          "status": 1
+        },
+        {
+          "hash": "0x2674982935a7894b26e74dd17725d07f087f025a8d1c2a265bba79658970412f",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 11,
+          "block": 92,
+          "gas": 249734,
+          "ts": 1794814887000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0xe96b60f60d33fd903233ae9cc534bcf95062370a3e612a84986f884064d74b9e",
+          "status": 1
+        },
+        {
+          "hash": "0x43e4f0c5b47d94bd37bca4f477a6dea502a02cccb7ef3a725741c3878eccd1f9",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 11,
+          "block": 93,
+          "gas": 144881,
+          "ts": 1794814888000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0x16248f5565e0958fbbb63d000c81f1ed59099aca39c515903ca225b9f8f0096c",
+          "status": 1
+        },
+        {
+          "hash": "0x9788d00ab2aae289432a5a6b842a7583a463ad8acca93a2c592d9d817cd8f889",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 11,
+          "block": 94,
+          "gas": 32516,
+          "ts": 1794814889000,
+          "detail": "Round finalized",
+          "blockHash": "0x088ed21d1c3b4ddcb2a8332f7579e5d6eb39ddf6b5a44e12ea9b3ddb9fc2a78c",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 903,
+      "maskingError": 1.2961404518424535e-06
+    },
+    {
+      "id": 12,
+      "status": "closed",
+      "startModelHash": "0xb85e9008664d8e10b862f3cb5ba4a4be647e29d852d035f41f7045e70a2f5198",
+      "startCid": "bafkreidcgzenpigv7dtrw74sltpnm5uvfsyieq4zta5panjyhgemyr2k34",
+      "globalModelHash": "0x1d69f2354d0d8caf666be030e34ef156279f0ef91dbcb2d55f1952334f995385",
+      "globalCid": "bafkreigxkgxwrxdwartoj57sfz3ckztmatbhabmzjtfgoc4w2v2edz43uy",
+      "accuracy": 92.98245614035088,
+      "auc": 97.78439153439153,
+      "f1": 94.44444444444444,
+      "epsilonSpent": 2.5022422618508804,
+      "epsilonByHospital": [
+        2.4990613408352274,
+        2.4981472945138696,
+        2.5022422618508804,
+        null
+      ],
+      "openedAt": 1794814890000,
+      "closedAt": 1794814897000,
+      "updates": [
+        {
+          "hospitalId": 0,
+          "updateHash": "0x0e08ae183e8e22fa2a5a3ce11badffd679ddcdfee404c840796de71bfe75080e",
+          "txHash": "0x4d79a39a0a9c6380d101a4a33ff70e7038764784dd270bfaa8b631ab7ec74eeb",
+          "score": 0.7627,
+          "weight": 0.4766132530527322,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.7808
+        },
+        {
+          "hospitalId": 1,
+          "updateHash": "0x605735e0b7a85de170574eeefc2b49c9ffc047233f7b3e6f72196fb69aea2b27",
+          "txHash": "0x83e41be7ff7116579b157bea10b61085ed8f96c3886fafd5aa3335ebdbf907b5",
+          "score": 0.0741,
+          "weight": 0.1412283139775003,
+          "flagged": true,
+          "excluded": false,
+          "reputationAfter": 0.3246
+        },
+        {
+          "hospitalId": 2,
+          "updateHash": "0xa44cf46472a69aead553ceb5ed7daf84dd40ddaa92510388d5c33e379cac4ec5",
+          "txHash": "0x7ad23b05493a1950791ebbce88b08deb9f3e7a0328da8f538fd9b98ee1581633",
+          "score": 0.9318,
+          "weight": 0.3821584329697675,
+          "flagged": false,
+          "excluded": false,
+          "reputationAfter": 0.4562
+        },
+        {
+          "hospitalId": 3,
+          "updateHash": "0x75e43f8158b6d6bee4b5dd86af9979f5043abd9518edd18bef053bbf868b1097",
+          "txHash": "0x15018b6256771ec19a751ae1eb681ebc67ca8b30a06c449fa15da3dbe57ef3ce",
+          "score": 0.0,
+          "weight": 0.0,
+          "flagged": true,
+          "excluded": true,
+          "reputationAfter": 0.0001
+        }
+      ],
+      "txs": [
+        {
+          "hash": "0x1c4b4d97e1aca2850e06a1e406e37e9e2c9fce410e212b2b0673f83dd3ec6dcb",
+          "fn": "openRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 12,
+          "block": 95,
+          "gas": 146780,
+          "ts": 1794814890000,
+          "detail": "Start model committed",
+          "blockHash": "0x10b73cfc8e1035b09ef5201aa10be4fbfb48cbdf3f1b85133164ddf60b7834ef",
+          "status": 1
+        },
+        {
+          "hash": "0x4d79a39a0a9c6380d101a4a33ff70e7038764784dd270bfaa8b631ab7ec74eeb",
+          "fn": "submitUpdate",
+          "from": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+          "round": 12,
+          "block": 96,
+          "gas": 72853,
+          "ts": 1794814891000,
+          "detail": "Update from Hospital A",
+          "blockHash": "0x0519370ae787782bdb5d4b4d27fa0b5b199517f42e28c5a6986ce23128a4d30f",
+          "status": 1
+        },
+        {
+          "hash": "0x83e41be7ff7116579b157bea10b61085ed8f96c3886fafd5aa3335ebdbf907b5",
+          "fn": "submitUpdate",
+          "from": "0x1efF47bc3a10a45D4B230B5d10E37751FE6AA718",
+          "round": 12,
+          "block": 97,
+          "gas": 55753,
+          "ts": 1794814892000,
+          "detail": "Update from Hospital B",
+          "blockHash": "0xc7e0d5f83b185a5bfd08d68e4e651e2d00a882c3ad58a783cfcaab28e4119705",
+          "status": 1
+        },
+        {
+          "hash": "0x7ad23b05493a1950791ebbce88b08deb9f3e7a0328da8f538fd9b98ee1581633",
+          "fn": "submitUpdate",
+          "from": "0xe1AB8145F7E55DC933d51a18c793F901A3A0b276",
+          "round": 12,
+          "block": 98,
+          "gas": 55753,
+          "ts": 1794814893000,
+          "detail": "Update from Hospital C",
+          "blockHash": "0x4c796951d1b7af70d9e03b71f35d841c0cef45ee488c7aef5a8b453188a21f39",
+          "status": 1
+        },
+        {
+          "hash": "0x15018b6256771ec19a751ae1eb681ebc67ca8b30a06c449fa15da3dbe57ef3ce",
+          "fn": "submitUpdate",
+          "from": "0xE57bFE9F44b819898F47BF37E5AF72a0783e1141",
+          "round": 12,
+          "block": 99,
+          "gas": 55753,
+          "ts": 1794814894000,
+          "detail": "Update from Hospital D",
+          "blockHash": "0x0e917c78d62ae17dfc0f63dbca7886bb38d60b00b6638c1c0ea8cf9a3178e0aa",
+          "status": 1
+        },
+        {
+          "hash": "0xb704cf7e11116b6f830bcd6d6d12ca8027bfae53bf6ce3810bbc6d213a191ca1",
+          "fn": "recordScores",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 12,
+          "block": 100,
+          "gas": 249286,
+          "ts": 1794814895000,
+          "detail": "Four contribution scores recorded",
+          "blockHash": "0x3b8aa942f096b3ceb6de9d65dcd205d66bc352828e8cd79a67a3b7eb5a81dc38",
+          "status": 1
+        },
+        {
+          "hash": "0x064446e20d934973dac6b22e9eccfbe9514a1ffb83f0cbceabe648e920b7c6ee",
+          "fn": "commitGlobalModel",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 12,
+          "block": 101,
+          "gas": 144881,
+          "ts": 1794814896000,
+          "detail": "Global model content ID committed",
+          "blockHash": "0xd446a4e827b7949df1b77784c05fa393b7f520a0a3150ba967b083f9ac25bea7",
+          "status": 1
+        },
+        {
+          "hash": "0x712ed11cc11c6866f8a65879e73d5a7b82e32a91ad3ea7205cb2df1f206e9aa5",
+          "fn": "closeRound",
+          "from": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+          "round": 12,
+          "block": 102,
+          "gas": 32516,
+          "ts": 1794814897000,
+          "detail": "Round finalized",
+          "blockHash": "0x873f4ffbd21b90ee05ba945a55f01f67b04028c34fe9380873a6d768ed4a2894",
+          "status": 1
+        }
+      ],
+      "phase": "done",
+      "durationMs": 907,
+      "maskingError": 1.279245455350353e-06
+    }
+  ],
+  "reputation": {
+    "0": 0.7808,
+    "1": 0.3246,
+    "2": 0.4562,
+    "3": 0.0001
+  },
+  "rewards": {
+    "0": 105365,
+    "1": 82496,
+    "2": 83341,
+    "3": 0
+  },
+  "head": 102,
+  "running": false,
+  "archived": true,
+  "error": null,
+  "chain": {
+    "id": 131277322940537,
+    "name": "Local Ethereum test chain",
+    "symbol": "test ETH"
+  },
+  "coordinator": "0xF2E246BB76DF876Cef8b38ae84130F4F55De395b",
+  "registry": "0x2946259E0334f33A064106302415aD3391BeD384",
+  "aggregator": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+  "totalRounds": 30,
+  "epsilonBudget": 4,
+  "storage": "Content-addressed off-chain storage",
+  "mode": "local-evm",
+  "attack": "sign_flip",
+  "privacy": true,
+  "baseline": null,
+  "split": {
+    "train": 415,
+    "validation": 40,
+    "test": 114
+  }
+}

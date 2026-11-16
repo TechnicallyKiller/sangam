@@ -48,7 +48,7 @@ export function Header() {
               <button className="icon-btn" onClick={disconnect} aria-label="Disconnect wallet"><LogOut size={16} /></button>
             </div>
           ) : (
-            <Button variant="secondary" icon={<Wallet size={16} />} onClick={openModal}>Connect wallet</Button>
+            <Button variant="secondary" icon={<Wallet size={16} />} onClick={openModal}>Operator access</Button>
           )}
         </div>
       </div>

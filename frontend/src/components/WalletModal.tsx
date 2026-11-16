@@ -1,71 +1,29 @@
-import { useEffect, useState } from "react";
-import { ArrowLeft, Loader2, X } from "lucide-react";
+import { useState } from "react";
+import { X } from "lucide-react";
 import { useWallet } from "../lib/wallet-context";
-import { PROVIDERS, WalletAccount, WalletProvider } from "../services/wallet";
-import { roleOf } from "../services/ledger";
-import { truncate } from "../lib/format";
-
-const MARK: Record<string, string> = { metamask: "M", walletconnect: "W", coinbase: "C" };
-
+import { authenticate } from "../services/ledger";
+import { Button } from "./ui";
 export function WalletModal() {
-  const { modalOpen, closeModal, connect, listAccounts } = useWallet();
-  const [provider, setProvider] = useState<WalletProvider | null>(null);
-  const [accounts, setAccounts] = useState<WalletAccount[] | null>(null);
-
-  useEffect(() => { if (!modalOpen) { setProvider(null); setAccounts(null); } }, [modalOpen]);
+  const { modalOpen, closeModal, connect } = useWallet();
+  const [token, setToken] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
   if (!modalOpen) return null;
-
-  const pick = async (p: WalletProvider) => {
-    setProvider(p);
-    setAccounts(await listAccounts(p));
-  };
-
-  return (
-    <div className="scrim center" onClick={closeModal}>
-      <div className="modal brutal" role="dialog" aria-label="Connect wallet" onClick={(e) => e.stopPropagation()}>
-        <header>
-          {provider && <button className="icon-btn" onClick={() => { setProvider(null); setAccounts(null); }} aria-label="Back"><ArrowLeft size={18} /></button>}
-          <h2>{provider ? `Select an account` : "Connect a wallet"}</h2>
-          <button className="icon-btn" onClick={closeModal} aria-label="Close"><X size={18} /></button>
-        </header>
-
-        {!provider && (
-          <>
-            <p className="muted">Sign in with the account that holds your role in the consortium. Reading the chain needs no wallet.</p>
-            <ul className="plist">
-              {PROVIDERS.map((p) => (
-                <li key={p.id}>
-                  <button onClick={() => pick(p)}>
-                    <span className={`pmark pm-${p.id}`}>{MARK[p.id]}</span>
-                    <span><b>{p.name}</b><small>{p.hint}</small></span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
-
-        {provider && !accounts && (
-          <div className="waiting"><Loader2 className="spin" size={22} /><p>Approve the request in {provider.name}…</p></div>
-        )}
-
-        {provider && accounts && (
-          <ul className="plist">
-            {accounts.map((a) => (
-              <li key={a.address}>
-                <button onClick={() => connect(provider, a)}>
-                  <span className="pmark pm-acct" />
-                  <span>
-                    <b>{a.label}</b>
-                    <small className="mono">{truncate(a.address, 8, 6)} · {a.balance.toFixed(3)} POL</small>
-                  </span>
-                  <em className={`role-tag role-${roleOf(a.address)}`}>{roleOf(a.address)}</em>
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
-  );
+  return <div className="scrim center" onClick={closeModal}>
+    <form className="modal brutal" role="dialog" aria-modal="true" aria-label="Operator access" onClick={e => e.stopPropagation()} onSubmit={async e => {
+      e.preventDefault(); setBusy(true); setError("");
+      try {
+        await authenticate(token);
+        connect({ id: "operator", name: "Operator", hint: "Private access" }, { address: "operator", label: "Experiment operator", balance: 0 });
+        setToken("");
+      } catch (e) { setError(e instanceof Error ? e.message : "Could not connect to the API."); }
+      finally { setBusy(false); }
+    }}>
+      <header><h2>Operator access</h2><button className="icon-btn" type="button" onClick={closeModal} aria-label="Close"><X size={18}/></button></header>
+      <p className="muted">Reading results is public. Enter the private operator token to run training. Transactions execute on the labelled local test chain.</p>
+      <label>Operator token<input type="password" autoComplete="off" value={token} onChange={e => setToken(e.target.value)} required style={{ width: "100%", padding: 12, marginTop: 8 }} /></label>
+      {error && <p role="alert" className="t-flagged">{error}</p>}
+      <Button type="submit" loading={busy}>Authorize</Button>
+    </form>
+  </div>;
 }

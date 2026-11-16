@@ -14,7 +14,7 @@ export default function Participants() {
   const latest = rounds[rounds.length - 1];
   const flagged = rounds.flatMap((r) => r.updates.filter((u) => u.flagged).map((u) => ({ r, u })));
   const stats = (h: Hospital) => {
-    const ups = rounds.flatMap((r: Round) => r.updates.filter((u) => u.hospitalId === h.id && u.score > 0));
+    const ups = rounds.filter(r => r.phase !== "training").flatMap((r: Round) => r.updates.filter((u) => u.hospitalId === h.id));
     return { n: ups.length, avg: ups.reduce((a, u) => a + u.score, 0) / Math.max(1, ups.length), flags: ups.filter((u) => u.flagged).length };
   };
 

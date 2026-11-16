@@ -7,7 +7,7 @@ const W = 720, H = 280, M = { l: 44, r: 16, t: 16, b: 32 };
 export function AccuracyChart({ rounds, total }: { rounds: Round[]; total: number }) {
   const done = rounds.filter((r) => r.accuracy !== null);
   const [hover, setHover] = useState<number | null>(null);
-  const min = 82, max = 100;
+  const min = 0, max = 100;
   const x = (id: number) => M.l + ((id - 1) / (total - 1)) * (W - M.l - M.r);
   const y = (v: number) => M.t + (1 - (v - min) / (max - min)) * (H - M.t - M.b);
 
@@ -18,7 +18,7 @@ export function AccuracyChart({ rounds, total }: { rounds: Round[]; total: numbe
   return (
     <figure className="chart">
       <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Global model test accuracy per round" onMouseLeave={() => setHover(null)}>
-        {[85, 90, 95, 100].map((v) => (
+        {[0, 25, 50, 75, 100].map((v) => (
           <g key={v}>
             <line x1={M.l} x2={W - M.r} y1={y(v)} y2={y(v)} className="grid" />
             <text x={M.l - 8} y={y(v) + 4} textAnchor="end" className="tick">{v}%</text>

@@ -47,8 +47,8 @@ export function RoundDrawer({ round, onClose }: { round: Round; onClose: () => v
                 <tr key={u.hospitalId}>
                   <td>{HOSPITALS[u.hospitalId].name}{u.flagged && <span className="chip chip-flagged tight"><i />Flagged</span>}{u.excluded && !u.flagged && <span className="chip chip-excluded tight"><i />Excluded</span>}</td>
                   <td><HashChip value={u.updateHash} /></td>
-                  <td className="mono">{u.score ? u.score.toFixed(3) : "—"}</td>
-                  <td className="mono">{u.score ? pct(u.weight) : "—"}</td>
+                  <td className="mono">{round.phase === "training" ? "—" : u.score.toFixed(3)}</td>
+                  <td className="mono">{round.phase === "training" ? "—" : pct(u.weight)}</td>
                   <td><div className="rep-cell"><RepBar value={u.reputationAfter} flagged={u.flagged} /><span className="mono">{u.reputationAfter.toFixed(2)}</span></div></td>
                 </tr>
               ))}

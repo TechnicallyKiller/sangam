@@ -42,7 +42,7 @@ export function Confluence({ round, hospitals }: { round: Round; hospitals: Hosp
               <circle cx={150} cy={y0} r={6} fill={flagged ? "var(--flagged)" : h.color} />
               <text x={30} y={y0 - 2} className="h-name">{h.name}</text>
               <text x={30} y={y0 + 15} className="h-sub">
-                {u ? (u.score === 0 ? "committed" : (flagged ? "flagged · " : "") + pct(u.weight)) : live ? "training…" : "—"}
+                {u ? (u.score === 0 && round.phase === "training" ? "committed" : (flagged ? "flagged · " : "") + pct(u.weight)) : live ? "training…" : "—"}
               </text>
             </g>
           );

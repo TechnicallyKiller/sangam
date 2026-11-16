@@ -20,6 +20,7 @@ export default function App() {
   const { push } = useToast();
   const [attack, setAttack] = useState("none");
   const [privacy, setPrivacy] = useState(true);
+  useEffect(() => { setAttack(state.attack); setPrivacy(state.privacy); }, [state.runId]);
   const begin = async () => {
     if (!account) return openModal();
     try { await openRound({ attack, privacy, newRun: true }); }
@@ -30,9 +31,9 @@ export default function App() {
       <Header />
       <main className="page">
         <section className="run-banner" aria-live="polite">
-          <div><b>{state.connection === "live" ? (state.archived ? "Saved experiment · API connected" : "Live experiment · local Ethereum test chain") : state.connection === "saved" ? "Saved experiment · API offline" : state.loading ? "Connecting to the experiment…" : "API unavailable"}</b><p>Four simulated hospitals · actual training and contract receipts · research prototype</p></div>
+          <div><b>{state.connection === "live" ? (state.archived ? "Saved experiment · API connected" : "Live experiment · local Ethereum test chain") : state.connection === "saved" ? "Saved experiment · API offline" : state.loading ? "Connecting to the experiment…" : "API unavailable"}</b><p>Four simulated hospitals · Hospital D: {state.attack === "none" ? "honest" : state.attack.replace(/_/g, " ")} · DP {state.privacy ? "on for honest clients" : "off"}</p></div>
           <div className="experiment-controls">
-            <label>Hospital D <select value={attack} onChange={e => setAttack(e.target.value)} disabled={state.running}><option value="none">Honest</option><option value="label_flip">Label flip</option><option value="sign_flip">Sign flip</option><option value="free_rider">Free rider</option></select></label>
+            <label>New run: Hospital D <select value={attack} onChange={e => setAttack(e.target.value)} disabled={state.running}><option value="none">Honest</option><option value="label_flip">Label flip</option><option value="sign_flip">Sign flip</option><option value="free_rider">Free rider</option></select></label>
             <label><input type="checkbox" checked={privacy} onChange={e => setPrivacy(e.target.checked)} disabled={state.running}/> DP-SGD</label>
             <Button variant="secondary" disabled={state.running || state.connection !== "live"} onClick={begin}>{state.rounds.length ? "New experiment" : "Start experiment"}</Button>
           </div>

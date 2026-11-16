@@ -68,7 +68,7 @@ export async function authenticate(token: string) {
   if (!r.ok) throw new Error("The operator token was not accepted.");
   sessionStorage.setItem("sangam-operator", token);
 }
-export function canOpenRound() { return state.connection === "live" && !state.running && !state.error && (state.archived || state.rounds.length < TOTAL_ROUNDS); }
+export function canOpenRound() { return state.connection === "live" && !state.archived && !state.running && !state.error && state.rounds.length < TOTAL_ROUNDS; }
 export async function openRound(options: { attack?: string; privacy?: boolean; newRun?: boolean } = {}) {
   const r = await fetch(`${API}/rounds/open`, {
     method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${operatorToken()}` },

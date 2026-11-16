@@ -19,7 +19,7 @@ const PHASE: Record<string, string> = {
 };
 
 export default function Overview() {
-  const { rounds, hospitals, running } = useLedger();
+  const { rounds, hospitals, running, archived } = useLedger();
   const openRound = useOpenRound();
   const [drawer, setDrawer] = useState<number | null>(null);
   const current = rounds[rounds.length - 1];
@@ -33,7 +33,7 @@ export default function Overview() {
       <PageHead
         title={running ? `Round ${current.id} in progress` : `Round ${current.id} closed`}
         lede={running ? PHASE[current.phase] : "Measured training results, with update hashes and model content IDs committed to the local test chain."}
-        actions={
+        actions={archived ? undefined :
           <Button icon={<Play size={16} />} loading={running} disabled={!running && !canOpenRound() && !exhausted ? true : exhausted} onClick={openRound}>
             {running ? "Round running" : exhausted ? "Training complete" : "Open next round"}
           </Button>

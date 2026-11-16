@@ -1,6 +1,6 @@
 """Rebuild editable final-defence slides and the manuscript from measured data."""
 from pathlib import Path
-import json, statistics, html
+import json, statistics, html, re
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -333,7 +333,7 @@ if template.exists():
     if cols is None:cols=OxmlElement('w:cols');sec._sectPr.append(cols)
     cols.set(qn('w:num'),'2');cols.set(qn('w:space'),'360')
     for typ,val in items[3:]:
-        if typ=='h':journal.add_paragraph(val,style=js('I_SectionTitle'))
+        if typ=='h':journal.add_paragraph(re.sub(r'^\d+\.\s*', '', val),style=js('I_References' if val == 'References' else 'I_SectionTitle'))
         elif typ=='p':journal.add_paragraph(val,style=js('I_Bibliography' if val.startswith('[') else 'I_Text'))
         elif typ=='f':
             journal.add_picture(str(FIG/f'{val[0]}.png'),width=DI(3.05))

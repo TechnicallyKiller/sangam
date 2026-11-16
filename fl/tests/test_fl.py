@@ -41,3 +41,10 @@ def test_reputation_rule():
     assert np.allclose(r, [.58, .58, .25])
     w = aggregation_weights(np.array([.5, .5, .1]), np.array([100., 100., 100.]))
     assert w[2] == 0 and abs(w.sum() - 1) < 1e-12
+
+
+def test_vector_accountant_matches_scalar_reference():
+    import math
+    for q in (0, 0.05, 0.2, 1):
+        reference = min(100 * dp.rdp_step(q, 2.0, a) + math.log(1e5) / (a - 1) for a in dp.ORDERS)
+        assert abs(dp.epsilon(q, 2.0, 100, 1e-5) - reference) < 1e-10

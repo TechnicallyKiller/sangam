@@ -1,5 +1,6 @@
 """DP-SGD step and an RDP accountant for the Poisson-subsampled Gaussian mechanism."""
 import math
+from functools import lru_cache
 
 import numpy as np
 from scipy.special import gammaln, logsumexp  # installed with scikit-learn
@@ -7,6 +8,9 @@ from scipy.special import gammaln, logsumexp  # installed with scikit-learn
 from model import per_example_grads
 
 ORDERS = list(range(2, 129))
+_A = np.asarray(ORDERS)[:, None]
+_K = np.arange(129)[None, :]
+_LOGC = gammaln(_A + 1) - gammaln(_K + 1) - gammaln(_A - _K + 1)
 
 
 def _log_binom(n, k):
@@ -27,9 +31,19 @@ def rdp_step(q, sigma, alpha):
 
 def epsilon(q, sigma, steps, delta):
     """(eps, delta)-DP after `steps` compositions, minimising over RDP orders."""
-    return min(steps * rdp_step(q, sigma, a) + math.log(1 / delta) / (a - 1) for a in ORDERS)
+    orders = np.asarray(ORDERS)
+    if q == 0:
+        rdp = np.zeros(len(ORDERS))
+    elif q >= 1:
+        rdp = orders / (2 * sigma ** 2)
+    else:
+        terms = (_LOGC + (_A - _K) * math.log1p(-q) + _K * math.log(q)
+                 + (_K * _K - _K) / (2 * sigma ** 2))
+        rdp = logsumexp(terms, axis=1) / (orders - 1)
+    return float(np.min(steps * rdp + math.log(1 / delta) / (orders - 1)))
 
 
+@lru_cache(maxsize=2048)
 def calibrate_sigma(q, steps, target_eps, delta, lo=0.3, hi=200.0):
     """Smallest noise multiplier whose total release satisfies target_eps."""
     for _ in range(40):

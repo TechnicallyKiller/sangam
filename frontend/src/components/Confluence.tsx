@@ -27,7 +27,7 @@ export function Confluence({ round, hospitals }: { round: Round; hospitals: Hosp
           className="saraswati-glow" filter="url(#soft)" />
         <path d={`M170,${MY + 46} C260,${MY + 100} 360,${MY + 20} ${MX},${MY + 34} S800,${MY + 70} ${W - 30},${MY + 40}`}
           className="saraswati" />
-        <text x={MX + 130} y={MY + 104} className="sa-label">masked updates · visible to no one</text>
+        <text x={MX + 130} y={MY + 104} className="sa-label">pairwise masking · arithmetic simulation</text>
 
         {hospitals.map((h, i) => {
           const y0 = 62 + i * 84;

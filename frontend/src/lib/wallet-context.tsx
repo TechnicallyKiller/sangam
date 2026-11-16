@@ -46,7 +46,7 @@ export function WalletProviderTree({ children }: { children: ReactNode }) {
       closeModal: () => setModalOpen(false),
       connect: (_p, a) => { setAccount(a); setModalOpen(false); },
       listAccounts: requestAccounts,
-      disconnect: () => setAccount(null),
+      disconnect: () => { sessionStorage.removeItem("sangam-operator"); setAccount(null); },
       pending,
       confirm,
       settle: (ok) => { pending?.resolve(ok); setPending(null); },

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sangam-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: SANGAM_ADMIN_TOKEN
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false

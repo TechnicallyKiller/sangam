@@ -3,3 +3,8 @@ __pycache__
 .env
 node_modules
 dist
+.data/
+.tools/
+.pytest_cache/
+.vercel/
+submission/private/

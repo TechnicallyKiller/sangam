@@ -32,7 +32,7 @@ export default function Overview() {
     <>
       <PageHead
         title={running ? `Round ${current.id} in progress` : `Round ${current.id} closed`}
-        lede={running ? PHASE[current.phase] : "Every hospital's update and every global model is committed on chain. Open the next round to watch the protocol run."}
+        lede={running ? PHASE[current.phase] : "Measured training results, with update hashes and model content IDs committed to the local test chain."}
         actions={
           <Button icon={<Play size={16} />} loading={running} disabled={!running && !canOpenRound() && !exhausted ? true : exhausted} onClick={openRound}>
             {running ? "Round running" : exhausted ? "Training complete" : "Open next round"}
@@ -41,9 +41,9 @@ export default function Overview() {
       />
 
       <section className="stats">
-        <Stat label="Global accuracy" value={lastDone.accuracy!.toFixed(2)} unit="%" note={`AUC ${lastDone.auc!.toFixed(2)} · round ${lastDone.id}`} tone="ganga" />
+        <Stat label="Global accuracy" value={lastDone?.accuracy?.toFixed(2) ?? "—"} unit="%" note={lastDone ? `AUC ${lastDone.auc!.toFixed(2)} · round ${lastDone.id}` : "First round in progress"} tone="ganga" />
         <Stat label="Training progress" value={`${current.id}`} unit={`/ ${TOTAL_ROUNDS}`} note={`${hospitals.length} hospitals enrolled`} tone="yamuna" />
-        <Stat label="Privacy spent" value={<PrivacyBadge spent={current.epsilonSpent} />} note="per hospital, δ = 10⁻⁵" tone="saraswati" />
+        <Stat label="Privacy accounting" value={<PrivacyBadge spent={current.epsilonSpent} />} note="maximum for DP-enabled honest hospitals, δ = 10⁻⁵" tone="saraswati" />
         <Stat label="Gas this round" value={fmtGas(gas)} note="4 hospitals, hashes only" />
       </section>
 
@@ -62,7 +62,7 @@ export default function Overview() {
         </div>
 
         <div className="card brutal-card">
-          <div className="card-head"><h2>Latest on chain</h2><span className="live"><i />live</span></div>
+          <div className="card-head"><h2>Contract receipts</h2><span className="muted">actual executed transactions</span></div>
           <ul className="feed">
             {feed.map((t) => (
               <li key={t.hash}>
